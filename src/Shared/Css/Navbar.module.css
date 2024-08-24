@@ -63,9 +63,61 @@
   color: white;
   transition: all 0.5s ease-in;
 }
-.navbar > .menu > nav > ul > li > select > #active1:hover {
-  background-color: #f26b30;
+
+/* Media Query */
+
+@media only screen and (min-width: 870px) and (max-width: 1440px) {
+  .navbar > .menu > nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    gap: 20px;
+  }
 }
-.navbar > .menu > nav > ul > li > select > #active2:hover {
-  background-color: green;
+@media only screen and (max-width: 780px) {
+  .navbar > .menu > nav > ul {
+    display: none;
+  }
 }
+@media only screen and (min-width: 768px) and (max-width: 890px) {
+  .navbar > .menu > nav > ul {
+    display: none;
+  }
+  .navbar > .menu > nav > .menuToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+  .navbar > .menu > nav > .menuToggle > span {
+    width: 40px;
+    height: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #f26b30;
+    color: #f26b30;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navbar > .menu > nav > ul {
+    display: none;
+  }
+  .navbar > .menu > nav > .menuToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+  .navbar > .menu > nav > .menuToggle > span {
+    width: 40px;
+    height: 3px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #f26b30;
+    color: #f26b30;
+  }
+}
+/* Media Query */

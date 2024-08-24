@@ -84,6 +84,11 @@ export default function Navbar() {
                 </div>
               </li>
             </ul>
+            <div className={style.menuToggle}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </nav>
         </div>
       </div>

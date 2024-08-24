@@ -9,12 +9,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import style from "../Components/Css/Content.module.css";
-import Resim1 from "/Resim1.jpg"; // Make sure image paths are correct
-import Resim2 from "/Resim2.jpg"; // Make sure image paths are correct
-import Resim3 from "/Resim3.jpg"; // Make sure image paths are correct
-import Resim4 from "/Resim4.jpg"; // Make sure image paths are correct
-import { BsCircleFill } from "react-icons/bs";
+import Resim1 from "/Resim1.jpg";
+import Resim2 from "/Resim2.jpg";
+import Resim3 from "/Resim3.jpg";
+import Resim4 from "/Resim4.jpg";
 
+import { BsCircleFill } from "react-icons/bs";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 export default function Content() {
   const swiperRef = useRef(null);
   const [picture, setPicture] = useState([
@@ -81,6 +82,17 @@ export default function Content() {
                     <p className={style.description}>{i.description}</p>
                     <button className={style.button}>{i.buttonText}</button>
                   </div>
+                  <div className={style.icons}>
+                    <i>
+                      <FaFacebookF className={style.facebook} />
+                    </i>
+                    <i>
+                      <FaInstagram className={style.instagram} />
+                    </i>
+                    <i>
+                      <FaLinkedinIn className={style.linkedin} />
+                    </i>
+                  </div>
                 </div>
               </SwiperSlide>
             );
@@ -89,7 +101,7 @@ export default function Content() {
             {picture.map((_, index) => (
               <BsCircleFill
                 key={index}
-                className={swiperRef.current ? `${style.dot}` : ""}
+                className={style.dot}
                 onClick={() => handlePaginationClick(index)}
               />
             ))}

@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.navbar > .logo > img {
+  width: 80px;
+  height: 80px;
+}
+
+.navbar > .menu > nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.navbar > .menu > nav > ul > li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar > .menu > nav > ul > li > a {
+  color: black;
+  text-decoration-line: none;
+}
+.navbar > .menu > nav > ul > li > a {
+  font-size: 15px;
+  font-family: "Poppins" sans-serif;
+  font-weight: 600;
+}
+.navbar > .menu > nav > ul > li > a:hover {
+  color: #f26b30;
+}
+.navbar > .menu > nav > ul > .dropdownLi {
+  outline: none;
+  border: none;
+}
+.select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  height: 40px;
+}
+.navbar > .menu > nav > ul > li > select {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-family: "Poppins" sans-serif;
+  font-weight: 600;
+  background-color: transparent;
+  background-color: #f26b30;
+  color: white;
+}
+.navbar > .menu > nav > ul > li > select > option {
+  background-color: #464646;
+  color: white;
+  transition: all 0.5s ease-in;
+}
+.navbar > .menu > nav > ul > li > select > #active1:hover {
+  background-color: #f26b30;
+}
+.navbar > .menu > nav > ul > li > select > #active2:hover {
+  background-color: green;
+}

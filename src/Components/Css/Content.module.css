@@ -42,7 +42,7 @@
   color: white;
   padding: 14px 60px;
   border: none;
-  border-radius: 50px;
+  border-radius: 2px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -137,6 +137,34 @@
 @media only screen and (min-width: 768px) and (min-height: 900px) {
   .customPagination {
     display: none;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #f26b30;
+  }
+
+  .description {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .button {
+    background-color: #f26b30;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 /* Media Query */

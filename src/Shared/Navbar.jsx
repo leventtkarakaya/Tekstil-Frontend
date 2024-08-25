@@ -1,10 +1,16 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, act } from "react";
+import NavMobile from "../Components/NavMobile";
 import Logo from "/Logo.png";
 import En from "/En.png";
 import Tr from "/Tr.png";
 import style from "./Css/Navbar.module.css";
+
 export default function Navbar() {
   const [active, setActive] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(true);
+  const handleActiveMenu = () => {
+    setActiveMenu((prev) => !prev);
+  };
   const handleActive = () => {
     setActive((prev) => !prev);
   };
@@ -84,10 +90,12 @@ export default function Navbar() {
                 </div>
               </li>
             </ul>
-            <div className={style.menuToggle}>
-              <span></span>
-              <span></span>
-              <span></span>
+            <div className={style.containerNav}>
+              <NavMobile
+                active={activeMenu}
+                handleActiveMenu={handleActiveMenu}
+                containerStyle={style.containerNav}
+              />
             </div>
           </nav>
         </div>

@@ -168,9 +168,9 @@ export default function NavMobile({ active, handleActiveMenu }) {
                     {link.select === false && link.title}
                   </h5>
                   {link.select ? (
-                    <div class="dropdown">
+                    <div className="dropdown" key={link.id}>
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        className="btn btn-secondary dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -184,12 +184,12 @@ export default function NavMobile({ active, handleActiveMenu }) {
                       >
                         {link.title}
                       </button>
-                      <ul class="dropdown-menu dropdown-menu-group mt-1">
+                      <ul className="dropdown-menu dropdown-menu-group mt-1">
                         <li>
                           {link.header.map((header) => (
                             <a
                               href={header.link}
-                              class="dropdown-item"
+                              className="dropdown-item"
                               style={{
                                 fontFamily: "Google",
                                 color: "black",

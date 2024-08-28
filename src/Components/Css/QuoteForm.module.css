@@ -16,6 +16,24 @@
 .QuoteForm > .QuoteFormContent > .QuoteFormContentWrapper {
   position: relative;
 }
+
+.QuoteFormLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  color: #f26b30;
+}
+.QuoteFormLine > span {
+  display: block;
+  margin-right: 30px;
+  width: 40px;
+  height: 1px;
+  background-color: #222222;
+}
+
 .QuoteFormContent > .QuoteFormContentWrapper > .QuoteFormContentText {
   position: absolute;
   color: white;
@@ -129,6 +147,8 @@
   max-height: 550px;
   border-radius: 10px;
   margin-bottom: 180px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .QuoteFormContent
@@ -164,6 +184,7 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   gap: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .QuoteFormContent
   > .QuoteFormContentWrapper
@@ -175,4 +196,50 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.QuoteFormContent
+  > .QuoteFormContentWrapper
+  > .QuoteFormContentText
+  > .QuoteFormContentForm
+  > .QuoteFormContentFormInput
+  > .QuoteFormContentFormInputListContent
+  > div
+  > input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #222222;
+  padding: 5px;
+  font-size: 15px;
+  color: #222222;
+}
+.QuoteFormContent
+  > .QuoteFormContentWrapper
+  > .QuoteFormContentText
+  > .QuoteFormContentForm
+  > .QuoteFormContentFormInput
+  > .QuoteFormContentFormInputListContentTel {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.QuoteFormContent
+  > .QuoteFormContentWrapper
+  > .QuoteFormContentText
+  > .QuoteFormContentForm
+  > .QuoteFormContentFormInput
+  > .QuoteFormContentFormInputListContentEmail {
+  width: 100%;
+  margin-top: 20px;
+  height: 30px;
+  padding: 5px;
+}
+
+.QuoteFormContent
+  > .QuoteFormContentWrapper
+  > .QuoteFormContentText
+  > .QuoteFormContentForm
+  > .QuoteFormContentFormInput
+  > .QuoteFormContentFormInputListContentTextArea {
+  margin-top: 30px;
 }

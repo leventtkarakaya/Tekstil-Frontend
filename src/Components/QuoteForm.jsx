@@ -5,7 +5,26 @@ export default function QuoteForm() {
     <>
       <div className={style.QuoteForm}>
         <div>
-          <h1>Hemen Teklif Alın</h1>
+          <h1
+            style={{
+              color: "#2d2d2d",
+              textAlign: "center",
+              lineHeight: "50px",
+              fontWeight: "bold",
+              fontSize: "40px",
+              fontFamily: "Poppins" + ", sans-serif",
+              textTransform: "uppercase",
+            }}
+          >
+            Hemen Teklİf Alın
+          </h1>
+          <ul className={style.QuoteFormLine}>
+            <span></span>
+            <li></li>
+            <li></li>
+            <li></li>
+            <span></span>
+          </ul>
         </div>
         <div className={style.QuoteFormContent}>
           <div className={style.QuoteFormContentWrapper}>
@@ -75,26 +94,114 @@ export default function QuoteForm() {
                   </h3>
                   <div className={style.QuoteFormContentFormInputListContent}>
                     <div>
-                      <label htmlFor="">Adınız* </label>
-                      <input type="text" placeholder="Adınız" />
+                      <label
+                        htmlFor="name"
+                        style={{
+                          color: "#797979",
+                          fontWeight: "bold",
+                          fontSize: "20px",
+                          lineHeight: "30px",
+                        }}
+                      >
+                        Adınız*{" "}
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Adınız"
+                        required
+                        name="name"
+                        id="name"
+                      />
                     </div>
                     <div>
-                      <label htmlFor="">Şirket Adı </label>
-                      <input type="text" placeholder="Şirket Adı" />
+                      <label
+                        htmlFor="Company"
+                        style={{
+                          color: "#797979",
+                          fontWeight: "bold",
+                          fontSize: "20px",
+                          lineHeight: "30px",
+                        }}
+                      >
+                        Şirket Adı{" "}
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Şirket Adı"
+                        name="Company"
+                        id="Company"
+                        required
+                      />
                     </div>
                   </div>
-
-                  <div>
-                    <label>Telefon</label>
-                    <input type="number" placeholder="Telefon" />
+                  <div
+                    className={style.QuoteFormContentFormInputListContentTel}
+                  >
+                    <label
+                      htmlFor="tel"
+                      style={{
+                        color: "#797979",
+                        fontWeight: "bold",
+                        fontSize: "20px",
+                        lineHeight: "30px",
+                      }}
+                    >
+                      Telefon
+                    </label>
+                    <input
+                      type="tel"
+                      name="tel"
+                      id="tel"
+                      placeholder="Telefon"
+                      minlength="11"
+                      maxlength="11"
+                      required
+                    />
                   </div>
-                  <div>
-                    <label>E-Posta</label>
-                    <input type="email" placeholder="E-Posta" />
+                  <div
+                    className={style.QuoteFormContentFormInputListContentEmail}
+                  >
+                    <label
+                      htmlFor="email"
+                      style={{
+                        color: "#797979",
+                        fontWeight: "bold",
+                        fontSize: "20px",
+                        lineHeight: "30px",
+                      }}
+                    >
+                      E-Posta
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="E-Posta"
+                      name="email"
+                      id="email"
+                      required
+                    />
                   </div>
-                  <div>
-                    <label>Mesajınız</label>
-                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                  <div
+                    className={
+                      style.QuoteFormContentFormInputListContentTextArea
+                    }
+                  >
+                    <label
+                      htmlFor="Message"
+                      style={{
+                        color: "#797979",
+                        fontWeight: "bold",
+                        fontSize: "20px",
+                        lineHeight: "30px",
+                      }}
+                    >
+                      Mesajınız
+                    </label>
+                    <textarea
+                      name="message"
+                      id="Message"
+                      cols="49"
+                      rows="3"
+                    ></textarea>
                   </div>
                 </div>
               </div>

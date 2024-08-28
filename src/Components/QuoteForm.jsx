@@ -199,8 +199,8 @@ export default function QuoteForm() {
                     <textarea
                       name="message"
                       id="Message"
-                      cols="49"
-                      rows="3"
+                      cols="51"
+                      rows="5"
                     ></textarea>
                   </div>
                 </div>

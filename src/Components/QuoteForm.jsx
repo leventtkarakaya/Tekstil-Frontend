@@ -32,7 +32,7 @@ export default function QuoteForm() {
               src="/Resim1.jpg"
               alt="Aker Tekstil"
               width={1100}
-              height={600}
+              height={650}
             />
             <div className={style.QuoteFormContentText}>
               <div className={style.QuoteFormContentTextListWrapper}>
@@ -200,9 +200,12 @@ export default function QuoteForm() {
                       name="message"
                       id="Message"
                       cols="51"
-                      rows="5"
+                      rows="4"
                     ></textarea>
                   </div>
+                  <button class="btn btn-primary w-100" type="submit">
+                    Button
+                  </button>
                 </div>
               </div>
             </div>

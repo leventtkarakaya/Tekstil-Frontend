@@ -1,0 +1,27 @@
+.GalleryTitle {
+  color: #222222;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GalleryLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #f26b30;
+}
+.GalleryLine > span {
+  width: 40px;
+  height: 1px;
+  background-color: #797979;
+  margin-right: 30px;
+  color: black;
+}

@@ -1,0 +1,161 @@
+footer > .FooterBg {
+  background-image: url("../../../public/Gallery1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.FooterContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.FooterContent > .FooterContentWrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.FooterContent
+  > .FooterContentWrapper
+  > .FooterContentWrapperGrid1
+  > .FooterContentWrapperGrid1Icon {
+  display: flex;
+  gap: 30px;
+}
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid1 > span {
+  background-color: #f26b30;
+  width: 40px;
+  height: 1px;
+}
+
+.FooterContentWrapperGrid1Icon > .facebook {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+.FooterContentWrapperGrid1Icon > .instagram {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+.FooterContentWrapperGrid1Icon > .whatsapp {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.FooterContentWrapperGrid1Icon > .telegram {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.FooterContentWrapperGrid1Icon > .facebook:hover {
+  color: #1877f2;
+}
+.FooterContentWrapperGrid1Icon > .instagram:hover {
+  color: #e1306c;
+}
+.FooterContentWrapperGrid1Icon > .whatsapp:hover {
+  color: #25d366;
+}
+.FooterContentWrapperGrid1Icon > .telegram:hover {
+  color: #0088cc;
+}
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid2 > ul > li {
+  list-style: none;
+  color: white;
+  cursor: pointer;
+}
+
+.FooterContent
+  > .FooterContentWrapper
+  > .FooterContentWrapperGrid2
+  > ul
+  > li
+  > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.FooterContent
+  > .FooterContentWrapper
+  > .FooterContentWrapperGrid2
+  > ul
+  > li
+  > a:hover {
+  color: #f26b30;
+}
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 2.8;
+}
+
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid3 > p {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid3 > p > span {
+  color: #f26b30;
+  text-transform: uppercase;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 480px) {
+  footer > .FooterBg {
+    height: 1200px;
+  }
+  .FooterContent > .FooterContentWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: start;
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+  footer > .FooterBg {
+    height: 800px;
+  }
+  .FooterContent > .FooterContentWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 20px;
+  }
+  .FooterContent > .FooterContentWrapper > .FooterContentWrapperGrid3 {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 2.8;
+  }
+}
+
+/* Media Query */

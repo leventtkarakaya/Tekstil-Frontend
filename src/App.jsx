@@ -4,8 +4,10 @@ import Home from "./Pages/Home";
 import Navbar from "./Shared/Navbar";
 import Footer from "./Shared/Footer";
 import About from "./Pages/About";
-import OurCustomers from "./Shared/OurCustomers";
-import HumanrResources from "./Shared/HumanrResources";
+import OurCustomers from "./Pages/OurCustomers";
+import HumanrResources from "./Pages/HumanrResources";
+import Gallery from "./Pages/Gallery";
+import ProductionGuide from "./Pages/ProductionGuide";
 import ScrollTopBtn from "./Components/ScrollTopBtn";
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/hakkımızda" element={<About />} />
         <Route path="/musterilerimiz" element={<OurCustomers />} />
         <Route path="/insankaynaklari" element={<HumanrResources />} />
+        <Route path="/uretimtesisi" element={<ProductionGuide />} />
+        <Route path="/galeri" element={<Gallery />} />
       </Routes>
       <Footer />
     </>

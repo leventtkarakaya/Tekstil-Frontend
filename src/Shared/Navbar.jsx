@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import NavMobile from "../Components/NavMobile";
 import Logo from "/Logo.png";
 import En from "/En.png";
@@ -8,12 +8,11 @@ import { useTranslation } from "react-i18next";
 export default function Navbar() {
   const [active, setActive] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
+  const [targetElement, setTargetElement] = useState([]);
   const { t, i18n } = useTranslation();
+  const buttonRef = useRef(null);
   const handleActiveMenu = () => {
     setActiveMenu((prev) => !prev);
-  };
-  const handleLink = (e) => {
-    console.log(e);
   };
   const handleLanguage = (event) => {
     i18n.changeLanguage(event);
@@ -21,8 +20,18 @@ export default function Navbar() {
   };
   const currentLanguage = localStorage.getItem("i18nextLng");
   console.log("🚀 ~ Navbar ~ currentLanguage:", currentLanguage);
-  console.log(t("HeaderTr.1"));
-
+  const handlebuttonref = () => {
+    targetElement.forEach((element) => {
+      element.classList.add("dropdownItemElement");
+    });
+  };
+  useEffect(() => {
+    const target1 = buttonRef.current.nextSibling.lastChild.lastChild.lastChild;
+    const target2 = buttonRef.current.nextSibling.lastChild.lastChild.lastChild;
+    const target3 = buttonRef.current.nextSibling.lastChild.lastChild.lastChild;
+    setTargetElement([target1, target2, target3]);
+    console.log("🚀 ~ Navbar ~ targetElement:", targetElement);
+  }, [buttonRef.current]);
   return (
     <header>
       <div className={style.navbar}>
@@ -48,7 +57,11 @@ export default function Navbar() {
                     : `${t("HeaderEn.Offer")}`}
                 </a>
               </li>
-              <div className={style.dropdownLi}>
+              <div
+                className={style.dropdownLi}
+                ref={buttonRef}
+                onClick={() => handlebuttonref()}
+              >
                 <button
                   className="btn btn-secondary dropdown-toggle"
                   type="button"
@@ -59,19 +72,36 @@ export default function Navbar() {
                     ? `${t("HeaderTr.Kurumsal")}`
                     : `${t("HeaderEn.Corporate")}`}
                 </button>
-                <ul className="dropdown-menu">
+                <ul
+                  className="dropdown-menu"
+                  style={{
+                    margin: "0",
+                    padding: "0",
+                    border: "none",
+                    backgroundColor: "white",
+                  }}
+                >
                   <li>
-                    <a className="dropdown-item" href="/hakkımızda">
+                    <a
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                      href="#"
+                    >
                       Hakkımızda
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/musterilerimiz">
+                    <a
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                      href="#"
+                    >
                       Müşterilerimiz
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/insankaynaklari">
+                    <a
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                      href="#"
+                    >
                       İnsan Kaynakları
                     </a>
                   </li>
@@ -88,19 +118,36 @@ export default function Navbar() {
                     ? `${t("HeaderTr.Üretim")}`
                     : `${t("HeaderEn.Production")}`}
                 </button>
-                <ul className="dropdown-menu">
+                <ul
+                  className="dropdown-menu"
+                  style={{
+                    margin: "0",
+                    padding: "0",
+                    border: "none",
+                    backgroundColor: "white",
+                  }}
+                >
                   <li>
-                    <a className="dropdown-item" href="/hakkımızda">
+                    <a
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                      href="/galeri"
+                    >
                       Galeri
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/musterilerimiz">
+                    <a
+                      href="/uretimtesisi"
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                    >
                       Üretim Tesisi
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a
+                      href="#"
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                    >
                       Kalite
                     </a>
                   </li>
@@ -138,14 +185,28 @@ export default function Navbar() {
                     ? `${t("HeaderTr.Sürdürebilirlik")}`
                     : `${t("HeaderEn.SustainableDevelopment")}`}
                 </button>
-                <ul className="dropdown-menu">
+                <ul
+                  className={`dropdown-menu ${style.dropdownMenuContent}`}
+                  style={{
+                    margin: "0",
+                    padding: "0",
+                    border: "none",
+                    backgroundColor: "white",
+                  }}
+                >
                   <li>
-                    <a className="dropdown-item" href="/hakkımızda">
+                    <a
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                      href="/hakkımızda"
+                    >
                       ISG
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/musterilerimiz">
+                    <a
+                      className={`dropdown-item ${style.dropdownItemElement}`}
+                      href="/musterilerimiz"
+                    >
                       Tedarik Yönetimi
                     </a>
                   </li>
@@ -159,7 +220,12 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <div className={style.translate}>
+                <div
+                  className={style.translate}
+                  style={{
+                    cursor: "pointer",
+                  }}
+                >
                   {active ? (
                     <img
                       src={Tr}

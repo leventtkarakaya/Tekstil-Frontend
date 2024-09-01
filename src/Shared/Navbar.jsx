@@ -6,14 +6,14 @@ import Tr from "/Tr.png";
 import style from "./Css/Navbar.module.css";
 import { useTranslation } from "react-i18next";
 export default function Navbar() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
   const { t, i18n } = useTranslation();
   const handleActiveMenu = () => {
     setActiveMenu((prev) => !prev);
   };
-  const handleActive = () => {
-    setActive((prev) => !prev);
+  const handleLink = (e) => {
+    console.log(e);
   };
   const handleLanguage = (event) => {
     i18n.changeLanguage(event);
@@ -27,13 +27,15 @@ export default function Navbar() {
     <header>
       <div className={style.navbar}>
         <div className={style.logo}>
-          <img src={Logo} alt="Aker Tekstil" />
+          <a href="/">
+            <img src={Logo} alt="Aker Tekstil" />
+          </a>
         </div>
         <div className={style.menu}>
           <nav>
             <ul>
               <li>
-                <a href="#">
+                <a href="/">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Anasayfa")}`
                     : `${t("HeaderEn.Home")}`}
@@ -46,42 +48,64 @@ export default function Navbar() {
                     : `${t("HeaderEn.Offer")}`}
                 </a>
               </li>
-              <li className={style.dropdownLi}>
-                <select
-                  className="form-select"
-                  aria-label="Default select example"
+              <div className={style.dropdownLi}>
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  <option hidden>
-                    {currentLanguage === "tr"
-                      ? `${t("HeaderTr.Kurumsal")}`
-                      : `${t("HeaderEn.Corporate")}`}
-                  </option>
-                  <option value="1" id={style.active1}>
-                    Hakkımızda
-                  </option>
-                  <option value="2" id={style.active2}>
-                    Müşterilerimiz
-                  </option>
-                  <option value="3" id={style.active3}>
-                    İnsan Kaynakları
-                  </option>
-                </select>
-              </li>
-              <li>
-                <select
-                  className="form-select"
-                  aria-label="Default select example"
+                  {currentLanguage === "tr"
+                    ? `${t("HeaderTr.Kurumsal")}`
+                    : `${t("HeaderEn.Corporate")}`}
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/hakkımızda">
+                      Hakkımızda
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/musterilerimiz">
+                      Müşterilerimiz
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/insankaynaklari">
+                      İnsan Kaynakları
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className={style.dropdownLi}>
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  <option hidden>
-                    {currentLanguage === "tr"
-                      ? `${t("HeaderTr.Üretim")}`
-                      : `${t("HeaderEn.Production")}`}
-                  </option>
-                  <option value="1">Galeri</option>
-                  <option value="2">Üretim Tesisi</option>
-                  <option value="3">Kalite</option>
-                </select>
-              </li>
+                  {currentLanguage === "tr"
+                    ? `${t("HeaderTr.Üretim")}`
+                    : `${t("HeaderEn.Production")}`}
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/hakkımızda">
+                      Galeri
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/musterilerimiz">
+                      Üretim Tesisi
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Kalite
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <li>
                 <a href="#">
                   {currentLanguage === "tr"
@@ -103,20 +127,30 @@ export default function Navbar() {
                     : `${t("HeaderEn.OurStores")}`}
                 </a>
               </li>
-              <li>
-                <select
-                  className="form-select"
-                  aria-label="Default select example"
+              <div className={style.dropdownLi}>
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  <option hidden>
-                    {currentLanguage === "tr"
-                      ? `${t("HeaderTr.Sürdürebilirlik")}`
-                      : `${t("HeaderEn.SustainableDevelopment")}`}
-                  </option>
-                  <option value="1">ISG</option>
-                  <option value="2">Tedarik Yönetimi</option>
-                </select>
-              </li>
+                  {currentLanguage === "tr"
+                    ? `${t("HeaderTr.Sürdürebilirlik")}`
+                    : `${t("HeaderEn.SustainableDevelopment")}`}
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/hakkımızda">
+                      ISG
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/musterilerimiz">
+                      Tedarik Yönetimi
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <li>
                 <a href="#">
                   {currentLanguage === "tr"

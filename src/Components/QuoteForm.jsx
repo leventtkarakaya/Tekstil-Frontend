@@ -153,8 +153,6 @@ export default function QuoteForm() {
                       name="tel"
                       id="tel"
                       placeholder="Telefon"
-                      minlength="11"
-                      maxlength="11"
                       required
                     />
                   </div>
@@ -203,7 +201,7 @@ export default function QuoteForm() {
                       rows="4"
                     ></textarea>
                   </div>
-                  <button class="btn btn-primary w-100" type="submit">
+                  <button className="btn btn-primary w-100" type="submit">
                     Button
                   </button>
                 </div>

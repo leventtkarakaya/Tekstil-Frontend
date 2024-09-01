@@ -25,15 +25,15 @@ export default function NavMobile({ active, handleActiveMenu }) {
       title: "Kurumsal",
       header: [
         {
-          id: 1,
+          id: 31,
           title: "Hakkımızda",
         },
         {
-          id: 2,
+          id: 32,
           title: "Müşterilerimiz",
         },
         {
-          id: 3,
+          id: 33,
           title: "İnsan Kaynakları",
         },
       ],
@@ -45,17 +45,17 @@ export default function NavMobile({ active, handleActiveMenu }) {
       title: "Üretim",
       header: [
         {
-          id: 1,
+          id: 41,
           title: "Galeri",
           link: "/galeri",
         },
         {
-          id: 2,
+          id: 42,
           title: "Üretim Tesisi",
           link: "/uretimtesisi",
         },
         {
-          id: 3,
+          id: 43,
           title: "Sürdürebilirlik",
           title: "Kalite",
         },
@@ -68,17 +68,17 @@ export default function NavMobile({ active, handleActiveMenu }) {
       title: "Koleksiyon",
       header: [
         {
-          id: 1,
+          id: 51,
           title: "Hakkımızda",
           link: "/hakkımızda",
         },
         {
-          id: 2,
+          id: 52,
           title: "Müşterilerimiz",
           link: "/muşterilerimiz",
         },
         {
-          id: 3,
+          id: 53,
           title: "İnsan Kaynakları",
           link: "/ik",
         },
@@ -99,16 +99,16 @@ export default function NavMobile({ active, handleActiveMenu }) {
       link: "/",
     },
     {
-      id: 7,
+      id: 8,
       title: "Sürdürebilirlik",
       header: [
         {
-          id: 1,
+          id: 81,
           title: "ISG",
           link: "/isg",
         },
         {
-          id: 2,
+          id: 82,
           title: "Tedarik Yönetimi",
           link: "/tedarik",
         },
@@ -117,7 +117,7 @@ export default function NavMobile({ active, handleActiveMenu }) {
       link: "/",
     },
     {
-      id: 7,
+      id: 9,
       title: "İletişim",
       select: false,
       link: "/",
@@ -157,13 +157,13 @@ export default function NavMobile({ active, handleActiveMenu }) {
             className={style.menu}
             style={{
               display: "flex",
-              fontFamily: "Google",
+              fontFamily: "Google" + ", sans-serif",
               flexDirection: "column",
             }}
           >
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <>
-                <div key={link.id}>
+                <div>
                   <h5 style={{ fontFamily: "Google" }}>
                     {link.select === false && link.title}
                   </h5>
@@ -186,9 +186,10 @@ export default function NavMobile({ active, handleActiveMenu }) {
                       </button>
                       <ul className="dropdown-menu dropdown-menu-group mt-1">
                         <li>
-                          {link.header.map((header) => (
+                          {link.header.map((header, index) => (
                             <a
                               href={header.link}
+                              key={header.id}
                               className="dropdown-item"
                               style={{
                                 fontFamily: "Google",

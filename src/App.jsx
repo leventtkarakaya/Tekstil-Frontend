@@ -8,6 +8,8 @@ import OurCustomers from "./Pages/OurCustomers";
 import HumanrResources from "./Pages/HumanrResources";
 import Gallery from "./Pages/Gallery";
 import ProductionGuide from "./Pages/ProductionGuide";
+import QualityPage from "./Pages/QualityPage";
+import Colletion from "./Pages/Collection";
 import ScrollTopBtn from "./Components/ScrollTopBtn";
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/insankaynaklari" element={<HumanrResources />} />
         <Route path="/uretimtesisi" element={<ProductionGuide />} />
         <Route path="/galeri" element={<Gallery />} />
+        <Route path="/koleksiyon" element={<Colletion />} />
+        <Route path="/kalite" element={<QualityPage />} />
       </Routes>
       <Footer />
     </>

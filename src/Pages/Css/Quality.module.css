@@ -1,0 +1,21 @@
+.QualityPage {
+  margin: 0 auto;
+  padding: 100px 100px;
+  display: flex;
+}
+
+.QualityPageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.QualityPageWrapper > div > img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import NavMobile from "../Components/NavMobile";
 import Logo from "/Logo.png";
 import En from "/En.png";
@@ -8,9 +8,7 @@ import { useTranslation } from "react-i18next";
 export default function Navbar() {
   const [active, setActive] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
-  const [targetElement, setTargetElement] = useState([]);
   const { t, i18n } = useTranslation();
-  const buttonRef = useRef(null);
   const handleActiveMenu = () => {
     setActiveMenu((prev) => !prev);
   };
@@ -20,18 +18,7 @@ export default function Navbar() {
   };
   const currentLanguage = localStorage.getItem("i18nextLng");
   console.log("🚀 ~ Navbar ~ currentLanguage:", currentLanguage);
-  const handlebuttonref = () => {
-    targetElement.forEach((element) => {
-      element.classList.add("dropdownItemElement");
-    });
-  };
-  useEffect(() => {
-    const target1 = buttonRef.current.nextSibling.lastChild.lastChild.lastChild;
-    const target2 = buttonRef.current.nextSibling.lastChild.lastChild.lastChild;
-    const target3 = buttonRef.current.nextSibling.lastChild.lastChild.lastChild;
-    setTargetElement([target1, target2, target3]);
-    console.log("🚀 ~ Navbar ~ targetElement:", targetElement);
-  }, [buttonRef.current]);
+
   return (
     <header>
       <div className={style.navbar}>
@@ -57,11 +44,7 @@ export default function Navbar() {
                     : `${t("HeaderEn.Offer")}`}
                 </a>
               </li>
-              <div
-                className={style.dropdownLi}
-                ref={buttonRef}
-                onClick={() => handlebuttonref()}
-              >
+              <div className={style.dropdownLi}>
                 <button
                   className="btn btn-secondary dropdown-toggle"
                   type="button"
@@ -84,7 +67,7 @@ export default function Navbar() {
                   <li>
                     <a
                       className={`dropdown-item ${style.dropdownItemElement}`}
-                      href="#"
+                      href="/hakkımızda"
                     >
                       Hakkımızda
                     </a>
@@ -92,7 +75,7 @@ export default function Navbar() {
                   <li>
                     <a
                       className={`dropdown-item ${style.dropdownItemElement}`}
-                      href="#"
+                      href="/musterilerimiz"
                     >
                       Müşterilerimiz
                     </a>
@@ -100,7 +83,7 @@ export default function Navbar() {
                   <li>
                     <a
                       className={`dropdown-item ${style.dropdownItemElement}`}
-                      href="#"
+                      href="/insankaynaklari"
                     >
                       İnsan Kaynakları
                     </a>
@@ -145,7 +128,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/kalite"
                       className={`dropdown-item ${style.dropdownItemElement}`}
                     >
                       Kalite
@@ -154,7 +137,7 @@ export default function Navbar() {
                 </ul>
               </div>
               <li>
-                <a href="#">
+                <a href="/koleksiyon">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Koleksiyon")}`
                     : `${t("HeaderEn.Collection")}`}

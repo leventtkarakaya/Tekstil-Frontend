@@ -1,0 +1,37 @@
+.Collection {
+  margin: 0 auto;
+  padding: 100px 100px;
+  display: flex;
+}
+.Collection > .CollectionContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.Collection > .CollectionContent > .CollectionWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px 200px;
+}
+
+.Collection
+  > .CollectionContent
+  > .CollectionWrapper
+  > .CollectionContentWrapper {
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.Collection
+  > .CollectionContent
+  > .CollectionWrapper
+  > .CollectionContentWrapper
+  > .CollectionContentFlex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

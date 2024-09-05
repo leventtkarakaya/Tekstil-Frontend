@@ -46,7 +46,7 @@ export default function Footer() {
               </div>
               {/* Content */}
               <div className={style.FooterContentWrapperGrid2}>
-                <h3>MENü</h3>
+                <h3>MENÜ</h3>
                 <ul>
                   <li>
                     <a href="#">

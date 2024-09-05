@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import style from "./Css/Collection.module.css";
-import CollectionPicture1 from "/Collection1.jpg";
 import CollectionAll from "../Components/CollectionAll";
 import CollectionJeans from "../Components/CollectionJeans";
 import CollectionCeket from "../Components/CollectionJacket";
@@ -34,7 +33,7 @@ export default function Collection() {
       value: <CollectionShort />,
     },
   ]);
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const handleContent = (id) => {
     switch (id) {
       case 0:
@@ -63,27 +62,48 @@ export default function Collection() {
   };
   return (
     <>
-      <h1 style={{ textAlign: "center", marginTop: "50px" }}>ÜRETİMLERİMİZ</h1>
+      <h1 style={{ textAlign: "center", marginTop: "50px", color: "#f26b30" }}>
+        ÜRETİMLERİMİZ
+      </h1>
       <div className={style.Collection}>
         <div className={style.CollectionContent}>
           <div className={style.CollectionWrapper}>
             {/* Content */}
-            <div>
-              <h1>KATEGORİLER</h1>
-              <nav>
-                <ul>
-                  {allSection.map((section) => {
-                    return (
-                      <li
-                        key={section.id}
-                        onClick={() => handleContent(section.id)}
-                      >
-                        {section.title}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </nav>
+            <div className={style.CollectionContentNav}>
+              <div className={style.CollectionContentNavWrapper}>
+                <h1 style={{ textAlign: "center", color: "#f26b30" }}>
+                  KATEGORİLER
+                </h1>
+                <nav
+                  style={{
+                    backgroundColor: "#f4f4f4",
+                    color: "#2d2d2d",
+                    fontWeight: "initial",
+                    borderRadius: "10px",
+                    padding: "10px ",
+                    textAlign: "center",
+                  }}
+                >
+                  <ul
+                    style={{
+                      listStyle: "none",
+                      cursor: "pointer",
+                      padding: "0px",
+                    }}
+                  >
+                    {allSection.map((section) => {
+                      return (
+                        <li
+                          key={section.id}
+                          onClick={() => handleContent(section.id)}
+                        >
+                          {section.title}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </nav>
+              </div>
             </div>
             {/* Content */}
             <div className={style.CollectionContentWrapper}>

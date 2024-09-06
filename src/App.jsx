@@ -11,6 +11,7 @@ import ProductionGuide from "./Pages/ProductionGuide";
 import QualityPage from "./Pages/QualityPage";
 import Colletion from "./Pages/Collection";
 import ScrollTopBtn from "./Components/ScrollTopBtn";
+import OurStoresPage from "./Pages/OurStoresPage";
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/galeri" element={<Gallery />} />
         <Route path="/koleksiyon" element={<Colletion />} />
         <Route path="/kalite" element={<QualityPage />} />
+        <Route path="/magazalarimiz" element={<OurStoresPage />} />
       </Routes>
       <Footer />
     </>

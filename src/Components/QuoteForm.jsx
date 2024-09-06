@@ -3,7 +3,7 @@ import style from "./Css/QuoteForm.module.css";
 export default function QuoteForm() {
   return (
     <>
-      <div className={style.QuoteForm}>
+      <div id="QuoteForm" className={style.QuoteForm}>
         <div>
           <h1
             style={{

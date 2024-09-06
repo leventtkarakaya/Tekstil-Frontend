@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import NavMobile from "../Components/NavMobile";
+import { Link } from "react-scroll";
 import Logo from "/Logo.png";
 import En from "/En.png";
 import Tr from "/Tr.png";
 import style from "./Css/Navbar.module.css";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 export default function Navbar() {
   const [active, setActive] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
   const { t, i18n } = useTranslation();
+  const quoteForm = useRef(null);
+  const location = useLocation();
   const handleActiveMenu = () => {
     setActiveMenu((prev) => !prev);
   };
@@ -17,7 +21,6 @@ export default function Navbar() {
     setActive((prev) => !prev);
   };
   const currentLanguage = localStorage.getItem("i18nextLng");
-  console.log("🚀 ~ Navbar ~ currentLanguage:", currentLanguage);
 
   return (
     <header>
@@ -38,11 +41,25 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <Link
+                  ref={quoteForm}
+                  onClick={() =>
+                    location.pathname === "/"
+                      ? quoteForm.current.props.to == "QuoteForm"
+                      : (window.location.href = "/")
+                  }
+                  activeClass="active"
+                  to="QuoteForm"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                >
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.TeklifAl")}`
                     : `${t("HeaderEn.Offer")}`}
-                </a>
+                </Link>
               </li>
               <div className={style.dropdownLi}>
                 <button
@@ -144,14 +161,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a href="#">
-                  {currentLanguage === "tr"
-                    ? `${t("HeaderTr.Bloglar")}`
-                    : `${t("HeaderEn.Blog")}`}
-                </a>
-              </li>
-              <li>
-                <a href="#">
+                <a href="/magazalarimiz">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Mağzalarımız")}`
                     : `${t("HeaderEn.OurStores")}`}

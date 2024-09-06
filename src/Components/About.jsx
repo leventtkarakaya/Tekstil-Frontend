@@ -15,7 +15,7 @@ export default function About() {
       <div className={style.AboutContent}>
         <div className={style.AboutContentWrapper}>
           <img
-            src="/Resim1.jpg"
+            src={Resim1}
             alt="Aker Tekstil"
             width={1100}
             height={600}

@@ -7,7 +7,7 @@ import En from "/En.png";
 import Tr from "/Tr.png";
 
 export default function NavMobile({ active, handleActiveMenu }) {
-  const navLinks = [
+  const NavLinks = [
     {
       id: 1,
       title: "Anasayfa",
@@ -27,18 +27,20 @@ export default function NavMobile({ active, handleActiveMenu }) {
         {
           id: 31,
           title: "Hakkımızda",
+          link: "/hakkimizda",
         },
         {
           id: 32,
           title: "Müşterilerimiz",
+          link: "/musterilerimiz",
         },
         {
           id: 33,
           title: "İnsan Kaynakları",
+          link: "/insankaynaklari",
         },
       ],
       select: true,
-      link: "/",
     },
     {
       id: 4,
@@ -57,46 +59,22 @@ export default function NavMobile({ active, handleActiveMenu }) {
         {
           id: 43,
           title: "Sürdürebilirlik",
-          title: "Kalite",
+          title: "/kalite",
         },
       ],
       select: true,
-      link: "/",
     },
     {
       id: 5,
       title: "Koleksiyon",
-      header: [
-        {
-          id: 51,
-          title: "Hakkımızda",
-          link: "/hakkımızda",
-        },
-        {
-          id: 52,
-          title: "Müşterilerimiz",
-          link: "/muşterilerimiz",
-        },
-        {
-          id: 53,
-          title: "İnsan Kaynakları",
-          link: "/ik",
-        },
-      ],
       select: false,
-      link: "/",
-    },
-    {
-      id: 6,
-      title: "Blog",
-      select: false,
-      link: "/blog",
+      link: "/koleksiyon",
     },
     {
       id: 7,
       title: "Magzalarımız",
       select: false,
-      link: "/",
+      link: "/magazalarimiz",
     },
     {
       id: 8,
@@ -114,13 +92,12 @@ export default function NavMobile({ active, handleActiveMenu }) {
         },
       ],
       select: true,
-      link: "/",
     },
     {
       id: 9,
       title: "İletişim",
       select: false,
-      link: "/",
+      link: "/iletisim",
     },
   ];
   return (
@@ -136,7 +113,10 @@ export default function NavMobile({ active, handleActiveMenu }) {
         }}
       />
       {/* Active Menu */}
-      <div className={active ? style.active : style.inactive}>
+      <div
+        className={active ? style.active : style.inactive}
+        style={{ zIndex: "999" }}
+      >
         <aside className={style.navbar}>
           {/* Close Icon */}
           <div className={style.close}>
@@ -161,60 +141,66 @@ export default function NavMobile({ active, handleActiveMenu }) {
               flexDirection: "column",
             }}
           >
-            {navLinks.map((link, index) => (
-              <>
-                <div>
-                  <h5 style={{ fontFamily: "Google" }}>
-                    {link.select === false && link.title}
-                  </h5>
-                  {link.select ? (
-                    <div className="dropdown" key={link.id}>
-                      <button
-                        className="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        style={{
-                          backgroundColor: "#f26b30",
-                          outline: "none",
-                          border: "none",
-                          color: "white",
-                          padding: "10px 18px",
-                        }}
-                      >
-                        {link.title}
-                      </button>
-                      <ul className="dropdown-menu dropdown-menu-group mt-1">
-                        <li>
-                          {link.header.map((header, index) => (
-                            <a
-                              href={header.link}
-                              key={header.id}
-                              className="dropdown-item"
-                              style={{
-                                fontFamily: "Google",
-                                color: "black",
-                                lineHeight: "25px",
-                                fontSize: "18px",
-                                fontWeight: "700",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                textDecorationLine: "none",
-                                padding: "5px",
-                              }}
-                            >
-                              {header.title}
-                            </a>
-                          ))}
-                        </li>
-                      </ul>
-                    </div>
-                  ) : null}
-                </div>
-              </>
+            {NavLinks.map((link, index) => (
+              <div key={link.id}>
+                <a
+                  href={link.link}
+                  style={{
+                    fontFamily: "Google",
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  {link.select === false && link.title}
+                </a>
+                {link.select ? (
+                  <div className="dropdown" key={index}>
+                    <button
+                      className="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style={{
+                        backgroundColor: "#f26b30",
+                        outline: "none",
+                        border: "none",
+                        color: "white",
+                        padding: "10px 18px",
+                      }}
+                    >
+                      {link.title}
+                    </button>
+                    <ul className="dropdown-menu dropdown-menu-group mt-1">
+                      <li>
+                        {link.header.map((header, index) => (
+                          <a
+                            href={header.link}
+                            key={index}
+                            className="dropdown-item"
+                            style={{
+                              fontFamily: "Google",
+                              color: "black",
+                              lineHeight: "25px",
+                              fontSize: "18px",
+                              fontWeight: "700",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              textDecorationLine: "none",
+                              padding: "5px",
+                            }}
+                          >
+                            {header.title}
+                          </a>
+                        ))}
+                      </li>
+                    </ul>
+                  </div>
+                ) : null}
+              </div>
             ))}
           </div>
+          {/* Language */}
           <div className={style.language}>
             <img
               src={En}

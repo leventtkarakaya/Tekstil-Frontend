@@ -65,6 +65,13 @@ export default function Collection() {
       <h1 style={{ textAlign: "center", marginTop: "50px", color: "#f26b30" }}>
         ÜRETİMLERİMİZ
       </h1>
+      <ul className={style.CollectionLine}>
+        <span></span>
+        <li></li>
+        <li></li>
+        <li></li>
+        <span></span>
+      </ul>
       <div className={style.Collection}>
         <div className={style.CollectionContent}>
           <div className={style.CollectionWrapper}>

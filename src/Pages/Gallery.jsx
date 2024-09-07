@@ -1,23 +1,15 @@
 import React from "react";
-import GalleryBg from "/gallerybg.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import style from "./Css/GalleryPage.module.css";
-import Gallery1 from "/Gallery1.jpg";
-import Gallery2 from "/Gallery2.jpg";
-import Gallery3 from "/Gallery3.jpg";
-import Gallery4 from "/Gallery4.jpg";
-import Gallery5 from "/Gallery5.jpg";
-import Gallery6 from "/Gallery6.jpg";
-import Gallery7 from "/Gallery7.jpg";
-import Gallery8 from "/Gallery8.jpg";
+import "swiper/css";
+import "swiper/css/pagination";
+
 export default function Gallery() {
   return (
     <>
       <img
-        src={GalleryBg}
+        src="/gallerybg.jpg"
         alt="Aker Tekstil"
         style={{
           objectFit: "cover",
@@ -51,28 +43,68 @@ export default function Gallery() {
           className={style.Swiper}
         >
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery1} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery1.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery2} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery2.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery3} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery3.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery4} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery4.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery5} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery5.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery6} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery6.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery7} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery7.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.SwiperSlide}>
-            <img src={Gallery8} alt="Aker Tekstil" width={350} height={350} />
+            <img
+              src="/Gallery8.jpg"
+              alt="Aker Tekstil"
+              width={350}
+              height={350}
+            />
           </SwiperSlide>
         </Swiper>
       </div>

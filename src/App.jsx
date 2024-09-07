@@ -12,6 +12,9 @@ import QualityPage from "./Pages/QualityPage";
 import Colletion from "./Pages/Collection";
 import ScrollTopBtn from "./Components/ScrollTopBtn";
 import OurStoresPage from "./Pages/OurStoresPage";
+import IsgPage from "./Pages/IsgPage";
+import SupplyPage from "./Pages/SupplyPage";
+import ContactPage from "./Pages/ContactPage";
 function App() {
   return (
     <>
@@ -27,6 +30,9 @@ function App() {
         <Route path="/koleksiyon" element={<Colletion />} />
         <Route path="/kalite" element={<QualityPage />} />
         <Route path="/magazalarimiz" element={<OurStoresPage />} />
+        <Route path="/isg" element={<IsgPage />} />
+        <Route path="/tedarik" element={<SupplyPage />} />
+        <Route path="/iletisim" element={<ContactPage />} />
       </Routes>
       <Footer />
     </>

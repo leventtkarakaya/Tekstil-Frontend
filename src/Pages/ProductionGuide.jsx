@@ -33,16 +33,16 @@ export default function ProductionGuide() {
             className={style.ProductionGuideContentSwiper}
           >
             <SwiperSlide className={style.swiperSlide}>
-              <img src={Resim1} alt="" />
+              <img src={Resim1} alt="" className={style.swiperSlideImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={Resim2} alt="" />
+              <img src={Resim2} alt="" className={style.swiperSlideImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={Resim4} alt="" />
+              <img src={Resim4} alt="" className={style.swiperSlideImg} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={Resim5} alt="" />
+              <img src={Resim5} alt="" className={style.swiperSlideImg} />
             </SwiperSlide>
           </Swiper>
         </div>

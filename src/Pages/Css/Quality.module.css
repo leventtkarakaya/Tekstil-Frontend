@@ -1,7 +1,6 @@
 .QualityPage {
   margin: 0 auto;
   padding: 100px 100px;
-  display: flex;
 }
 
 .QualityPageWrapper {
@@ -19,3 +18,52 @@
   object-fit: cover;
   object-position: center;
 }
+
+/* Mobile  */
+@media only screen and (max-width: 780px) {
+  .QualityPage {
+    margin: 0 auto;
+    padding: 30px 10px;
+  }
+  .QualityPageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .QualityPageWrapper > div > img {
+    width: 400px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* Mobile */
+
+/* Tablet */
+
+@media only screen and (min-width: 780px) and (max-width: 1023px) {
+  .QualityPage {
+    margin: 0 auto;
+    padding: 30px 10px;
+  }
+  .QualityPageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .QualityPageWrapper > div > img {
+    width: 800px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* Tablet */

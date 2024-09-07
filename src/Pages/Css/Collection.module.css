@@ -59,3 +59,107 @@
   > li:hover {
   color: #f26b30;
 }
+.CollectionLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #f26b30;
+  width: 100%;
+}
+.CollectionLine > span {
+  width: 40px;
+  height: 2px;
+  background-color: #797979;
+  margin-right: 30px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 780px) {
+  .Collection {
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .Collection > .CollectionContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+  }
+  .Collection > .CollectionContent > .CollectionWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Collection
+    > .CollectionContent
+    > .CollectionWrapper
+    > .CollectionContentNav {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Mobile */
+
+/* Tablet */
+
+@media only screen and (min-width: 781px) and (max-width: 1024px) {
+  .Collection {
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .Collection > .CollectionContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+  }
+  .Collection > .CollectionContent > .CollectionWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Collection
+    > .CollectionContent
+    > .CollectionWrapper
+    > .CollectionContentNav {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Tablet */
+
+/* Desktop */
+
+@media only screen and (min-width: 1025px) {
+  .Collection {
+    margin: 0 auto;
+    padding: 100px;
+  }
+  .Collection > .CollectionContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .Collection
+    > .CollectionContent
+    > .CollectionWrapper
+    > .CollectionContentNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Desktop */

@@ -18,3 +18,33 @@
   object-fit: contain;
   object-position: center;
 }
+
+/* Mobile */
+@media only screen and (max-width: 780px) {
+  .GalleryWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 30px;
+  }
+  .GalleryWrapper > .Swiper {
+    width: 100%;
+    height: 60vh;
+  }
+}
+/* Mobile */
+
+/* Tablet */
+@media only screen and (min-width: 780px) and (max-width: 1023px) {
+  .GalleryWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 30px;
+  }
+  .GalleryWrapper > .Swiper {
+    width: 100%;
+    height: 40vh;
+  }
+}
+/* Tablet */

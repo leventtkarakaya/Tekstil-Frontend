@@ -190,7 +190,7 @@ export default function Navbar() {
                   <li>
                     <a
                       className={`dropdown-item ${style.dropdownItemElement}`}
-                      href="/hakkımızda"
+                      href="/isg"
                     >
                       ISG
                     </a>
@@ -198,7 +198,7 @@ export default function Navbar() {
                   <li>
                     <a
                       className={`dropdown-item ${style.dropdownItemElement}`}
-                      href="/musterilerimiz"
+                      href="/tedarik"
                     >
                       Tedarik Yönetimi
                     </a>
@@ -206,7 +206,7 @@ export default function Navbar() {
                 </ul>
               </div>
               <li>
-                <a href="#">
+                <a href="/iletisim">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.İletişim")}`
                     : `${t("HeaderEn.Contact")}`}

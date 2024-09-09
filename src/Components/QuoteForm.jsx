@@ -1,6 +1,9 @@
 import React from "react";
 import style from "./Css/QuoteForm.module.css";
+import { useTranslation } from "react-i18next";
 export default function QuoteForm() {
+  const currentLanguage = localStorage.getItem("i18nextLng");
+  const { t } = useTranslation();
   return (
     <>
       <div id="QuoteForm" className={style.QuoteForm}>
@@ -16,7 +19,9 @@ export default function QuoteForm() {
               textTransform: "uppercase",
             }}
           >
-            Hemen Teklİf Alın
+            {currentLanguage === "tr"
+              ? `${t("QuoteFormTr.Headtitle")}`
+              : `${t("QuoteFormEn.Headtitle")}`}
           </h1>
           <ul className={style.QuoteFormLine}>
             <span></span>
@@ -41,7 +46,9 @@ export default function QuoteForm() {
                     color: "#f26b30",
                   }}
                 >
-                  - Profesyonel Özel Denim Kot Üreticisi -
+                  {currentLanguage === "tr"
+                    ? `- ${t("QuoteFormTr.title")} -`
+                    : `- ${t("QuoteFormEn.title")} -`}
                 </h4>
                 <div className={style.QuoteFormContentTextList}>
                   <div className={style.QuoteFormContentTextListBox1}>
@@ -50,13 +57,29 @@ export default function QuoteForm() {
                         color: "#f26b30",
                       }}
                     >
-                      DÜŞÜK MOQ (300 Adet/Stil)
+                      {currentLanguage === "tr"
+                        ? `${t("QuoteFormTr.title2")}`
+                        : `${t("QuoteFormEn.title2")}`}
                     </p>
                     <div className={style.QuoteFormContentTextListBox1Check}>
                       <img src="/Check.png" alt="" width={30} height={30} />
-                      <p>DÜŞÜK MOQ</p>
-                      <p>(300 Adet/Stil)</p>
-                      <p>Minimum sipariş miktarı 300 adet kadardır.</p>
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.title4")}`
+                          : `${t("QuoteFormEn.title4")}`}
+                      </p>
+                      <p>
+                        {" "}
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.title5")}`
+                          : `${t("QuoteFormEn.title5")}`}
+                      </p>
+                      <p>
+                        {" "}
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.paragraph")}`
+                          : `${t("QuoteFormEn.paragraph")}`}
+                      </p>
                     </div>
                   </div>
                   <div className={style.QuoteFormContentTextListBox2}>
@@ -65,15 +88,28 @@ export default function QuoteForm() {
                         color: "#f26b30",
                       }}
                     >
-                      Hızlı Örnek (7-10 gün)
+                      {currentLanguage === "tr"
+                        ? `${t("QuoteFormTr.title3")}`
+                        : `${t("QuoteFormEn.title3")}`}
                     </p>
                     <div className={style.QuoteFormContentTextListBox2Check}>
                       <img src="/Check.png" alt="" width={30} height={30} />
-                      <p>Hızlı Örnek</p>
-                      <p>(7-10 gün)</p>
                       <p>
-                        Hızlı bir şekilde örnekler üretebilen özel prova
-                        departmanı.
+                        {" "}
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.title6")}`
+                          : `${t("QuoteFormEn.title6")}`}
+                      </p>
+                      <p>
+                        {" "}
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.paragraph2")}`
+                          : `${t("QuoteFormEn.paragraph2")}`}
+                      </p>
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.paragraph3")}`
+                          : `${t("QuoteFormEn.paragraph3")}`}
                       </p>
                     </div>
                   </div>
@@ -90,7 +126,9 @@ export default function QuoteForm() {
                       fontSize: "30px",
                     }}
                   >
-                    Hemen Teklif Alın
+                    {currentLanguage === "tr"
+                      ? `${t("QuoteFormTr.formtitle")}`
+                      : `${t("QuoteFormEn.formtitle")}`}
                   </h3>
                   <div className={style.QuoteFormContentFormInputListContent}>
                     <div>
@@ -103,7 +141,9 @@ export default function QuoteForm() {
                           lineHeight: "30px",
                         }}
                       >
-                        Adınız*{" "}
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.formInputName")}`
+                          : `${t("QuoteFormEn.formInputName")}`}
                       </label>
                       <input
                         type="text"
@@ -123,7 +163,9 @@ export default function QuoteForm() {
                           lineHeight: "30px",
                         }}
                       >
-                        Şirket Adı{" "}
+                        {currentLanguage === "tr"
+                          ? `${t("QuoteFormTr.formInputCompanyName")}`
+                          : `${t("QuoteFormEn.formInputCompanyName")}`}
                       </label>
                       <input
                         type="text"
@@ -146,7 +188,9 @@ export default function QuoteForm() {
                         lineHeight: "30px",
                       }}
                     >
-                      Telefon
+                      {currentLanguage === "tr"
+                        ? `${t("QuoteFormTr.formInputNumber")}`
+                        : `${t("QuoteFormEn.formInputNumber")}`}
                     </label>
                     <input
                       type="tel"
@@ -168,7 +212,9 @@ export default function QuoteForm() {
                         lineHeight: "30px",
                       }}
                     >
-                      E-Posta
+                      {currentLanguage === "tr"
+                        ? `${t("QuoteFormTr.formInputEmail")}`
+                        : `${t("QuoteFormEn.formInputEmail")}`}
                     </label>
                     <input
                       type="email"
@@ -192,7 +238,9 @@ export default function QuoteForm() {
                         lineHeight: "30px",
                       }}
                     >
-                      Mesajınız
+                      {currentLanguage === "tr"
+                        ? `${t("QuoteFormTr.formInputMessage")}`
+                        : `${t("QuoteFormEn.formInputMessage")}`}
                     </label>
                     <textarea
                       name="message"
@@ -201,8 +249,14 @@ export default function QuoteForm() {
                       rows="4"
                     ></textarea>
                   </div>
-                  <button className="btn btn-primary w-100" type="submit">
-                    Button
+                  <button
+                    className="btn w-100"
+                    style={{ backgroundColor: "#f26b30", color: "white" }}
+                    type="submit"
+                  >
+                    {currentLanguage === "tr"
+                      ? `${t("QuoteFormTr.formInputSubmit")}`
+                      : `${t("QuoteFormEn.formInputSubmit")}`}
                   </button>
                 </div>
               </div>

@@ -9,5 +9,28 @@
     "OurStores": "Our Stores",
     "SustainableDevelopment": "Sustainable Development",
     "Contact": "Contact"
+  },
+  "QuoteFormEn": {
+    "Headtitle": "Get a Quote Now",
+    "title": "Professional Custom Denim Jeans Manufacturer",
+    "title2": "LOW MOQ (300 Pieces/Style)",
+    "title3": "Fast Sample (7-10 Days)",
+    "title4": "LOW MOQ",
+    "title5": "(300 Pieces/Style)",
+    "paragraph": "The minimum order quantity is as low as 300 pieces.",
+    "title6": "Fast Sample",
+    "paragraph2": "(7-10 Days)",
+    "paragraph3": "Dedicated sample department capable of producing samples quickly.",
+    "formtitle": "Get a Quote Now",
+    "formInputName": "Name",
+    "formInputCompanyName": "Company Name",
+    "formInputEmail": "E-mail",
+    "formInputNumber": "Number",
+    "formInputMessage": "Message",
+    "formInputSubmit": "Submit"
+  },
+  "AboutUsEn": {
+    "title": "About Us",
+    "text": "We, AKER Tekstil, are a denim factory in Turkey producing denim apparel for high-quality brands worldwide. Our production includes denim jeans, denim skirts, denim jackets, and more. We provide a free sample service for you within 7-10 days. Your orders are welcome, we create samples based on your fabric sample, your samples, your design sketch, or a picture you provide. We can help you expedite samples and mass production at an acceptable price and quality."
   }
 }

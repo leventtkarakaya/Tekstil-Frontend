@@ -9,5 +9,28 @@
     "Mağzalarımız": "Mağzalarımız",
     "Sürdürebilirlik": "Sürdürebilirlik",
     "İletişim": "İletişim"
+  },
+  "QuoteFormTr": {
+    "Headtitle": "Hemen Teklif Alın",
+    "title": "Profesyonel Özel Denim Kot Üreticisi",
+    "title2": "DÜŞÜK MOQ (300 Adet/Stil)",
+    "title3": "Hızlı Örnek (7-10 gün)",
+    "title4": "DÜŞÜK MOQ",
+    "title5": "(300 Adet/Stil)",
+    "paragraph": "Minimum sipariş miktarı 300 adet kadardır.",
+    "title6": "Hızlı Örnek",
+    "paragraph2": "(7-10 gün).",
+    "paragraph3": "Hızlı bir şekilde örnekler üretebilen özel prova departmanı.",
+    "formtitle": "Hemen Teklif Alın",
+    "formInputName": "Adınız",
+    "formInputCompanyName": "Şirket Adı",
+    "formInputEmail": "E-Posta",
+    "formInputNumber": "Telefon",
+    "formInputMessage": "Mesajınız",
+    "formInputSubmit": "Gönder"
+  },
+  "AboutUsTr": {
+    "title": "HAKKIMIZDA",
+    "text": "Biz, AKER Tekstil, dünya çapında yüksek kaliteli markalar için denim giysiler üreten Türkiye'deki bir denim fabrikasıyız. Üretimimiz denim kot pantolon, denim etek, denim ceket vb. içerir. 7-10 gün içinde sizin için ücretsiz numune hizmeti sağlıyoruz. Siparişleriniz memnuniyetle karşılanır, kumaş numunenize, numunelerinize, tasarım taslağınıza veya bir fotoğrafınıza göre numuneler yaparız. Numuneleri ve seri üretimi kabul edilebilir fiyat ve kaliteyle hızlandırmanıza yardımcı olabiliriz."
   }
 }

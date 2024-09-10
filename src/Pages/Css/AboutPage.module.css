@@ -5,8 +5,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 100px;
-
-  height: 100vh;
+  gap: 50px;
   overflow-x: hidden;
 }
 .AboutContent > .AboutContentWrapper {
@@ -14,6 +13,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0px 0px;
+  margin: 0 auto;
 }
 .AboutContent > .AboutContentWrapper > h1 {
   font-family: "Poppins", sans-serif;
@@ -25,8 +26,8 @@
 .AboutContent > .AboutContentWrapper > p {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  font-weight: 500;
-  width: 60%;
+  font-weight: 600;
+  width: 100%;
   text-align: center;
   line-height: 2.2rem;
   margin-top: 20px;
@@ -34,17 +35,19 @@
   color: #797979;
   word-wrap: break-word;
 }
+
 .swiper {
   width: 100%;
-  height: 60vh;
+  height: 100%;
 }
 
-.swiper > .swiperSlide > img {
-  object-fit: cover;
+img {
+  object-fit: fill;
   object-position: center;
   width: 100%;
   height: 100%;
 }
+
 .AboutBG {
   width: 100%;
   height: 100%;
@@ -94,8 +97,7 @@
   .swiper {
     width: 100%;
     height: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 0px;
   }
 
   .swiper > .swiperSlide > img {

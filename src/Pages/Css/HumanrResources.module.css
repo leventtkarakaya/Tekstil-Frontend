@@ -198,11 +198,13 @@
 
 /* Laptop */
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .HumanrResources > .HumanrResourcesContent > .HumanrResourcesContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 100px 100px;
   }
   .HumanrResources
     > .HumanrResourcesContent
@@ -211,17 +213,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
     width: 100%;
     height: 100%;
   }
   .HumanrResources
     > .HumanrResourcesContent
     > .HumanrResourcesContentWrapper
-    > .HumanrResourcesContentFlex
-    > .HumanrResourcesContentForm {
-    padding: 0 60px;
+    > .HumanrResourcesContentFlex {
+    padding: 0px 0px;
   }
+
   .HumanrResources
     > .HumanrResourcesContent
     > .HumanrResourcesContentWrapper
@@ -272,7 +273,7 @@
     > .HumanrResourcesContentWrapper
     > .HumanrResourcesContentFlex
     > .HumanrResourcesContentForm {
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .HumanrResources
     > .HumanrResourcesContent

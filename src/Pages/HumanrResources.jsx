@@ -2,7 +2,10 @@ import React from "react";
 import style from "./Css/HumanrResources.module.css";
 import bg from "/FormBG.svg";
 import form from "/form.jpg";
+import { useTranslation } from "react-i18next";
 export default function HumanrResources() {
+  const { t } = useTranslation();
+  const currentLanguage = localStorage.getItem("i18nextLng");
   return (
     <>
       <div className={style.HumanrResources}>
@@ -17,23 +20,45 @@ export default function HumanrResources() {
               {/* Content */}
               <div className={style.HumanrResourcesContentForm}>
                 <h1 className={style.HumanrResourcesContentTitle}>
-                  İnsan Kaynakları
+                  {currentLanguage === "tr"
+                    ? `${t("HumanResourcesTr.title")}`
+                    : `${t("HumanResourcesEn.title")}`}
                 </h1>
                 <div className={style.HumanrResourcesContentInputName}>
                   <div>
-                    <label htmlFor="name">İsim</label>
+                    <label htmlFor="name">
+                      {currentLanguage === "tr"
+                        ? `${t("HumanResourcesTr.inputName")}`
+                        : `${t("HumanResourcesEn.inputName")}`}
+                    </label>
                     <input type="text" id="name" />
                   </div>
                   <div>
-                    <label htmlFor="Surname">Soyisim</label>
+                    <label htmlFor="Surname">
+                      {currentLanguage === "tr"
+                        ? `${t("HumanResourcesTr.inputSurname")}`
+                        : `${t("HumanResourcesEn.inputSurname")}`}
+                    </label>
                     <input type="text" id="Surname" />
                   </div>
                 </div>
-                <label htmlFor="email"> E-posta</label>
+                <label htmlFor="email">
+                  {currentLanguage === "tr"
+                    ? `${t("HumanResourcesTr.inputEmail")}`
+                    : `${t("HumanResourcesEn.inputEmail")}`}
+                </label>
                 <input type="email" id="email" />
-                <label htmlFor="phone">Telefon</label>
+                <label htmlFor="phone">
+                  {currentLanguage === "tr"
+                    ? `${t("HumanResourcesTr.inputNumber")}`
+                    : `${t("HumanResourcesEn.inputNumber")}`}
+                </label>
                 <input type="text" id="phone" />
-                <label htmlFor="message">Mesaj</label>
+                <label htmlFor="message">
+                  {currentLanguage === "tr"
+                    ? `${t("HumanResourcesTr.inputMessage")}`
+                    : `${t("HumanResourcesEn.inputMessage")}`}
+                </label>
                 <textarea name="" id="" cols="30" rows="5"></textarea>
               </div>
               {/* Content */}

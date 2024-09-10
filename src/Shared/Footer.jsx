@@ -6,8 +6,10 @@ import {
   FaTelegram,
   FaWhatsapp,
 } from "react-icons/fa";
-
+import { useTranslation } from "react-i18next";
 export default function Footer() {
+  const { t } = useTranslation();
+  const currentLanguage = localStorage.getItem("i18nextLng");
   return (
     <>
       <footer>
@@ -18,10 +20,14 @@ export default function Footer() {
               <div className={style.FooterContentWrapperGrid1}>
                 <img
                   src="/Logo.png"
-                  alt=""
-                  width={130}
-                  height={100}
-                  style={{ backgroundColor: "white" }}
+                  alt="Aker Tekstil"
+                  style={{
+                    width: "160px",
+                    height: "160px",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    backgroundColor: "white",
+                  }}
                 />
                 <span></span>
                 <div className={style.FooterContentWrapperGrid1Icon}>
@@ -42,51 +48,87 @@ export default function Footer() {
                     className={style.whatsapp}
                   />
                 </div>
-                <p style={{ color: "white" }}>info@mopetekstil.com</p>
+                <p style={{ color: "white" }}>
+                  {currentLanguage === "tr"
+                    ? `${t("FooterTr.Copyright")}`
+                    : `${t("FooterEn.Copyright")}`}
+                </p>
               </div>
               {/* Content */}
               <div className={style.FooterContentWrapperGrid2}>
-                <h3>MENÜ</h3>
+                <h3>
+                  {currentLanguage === "tr"
+                    ? `${t("FooterTr.title")}`
+                    : `${t("FooterEn.title")}`}
+                </h3>
                 <ul>
                   <li>
-                    <a href="#">
-                      <p>Anasayfa</p>
+                    <a href="/">
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("FooterTr.text1")}`
+                          : `${t("FooterEn.text1")}`}
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a id="QuoteForm">
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("FooterTr.text2")}`
+                          : `${t("FooterEn.text2")}`}
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/">
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("FooterTr.text3")}`
+                          : `${t("FooterEn.text3")}`}
+                      </p>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <p>Hakkımızda</p>
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("FooterTr.text4")}`
+                          : `${t("FooterEn.text4")}`}
+                      </p>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <p>Üretim</p>
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("FooterTr.text5")}`
+                          : `${t("FooterEn.text5")}`}
+                      </p>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <p>Galeri</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <p>Mağazalarımız</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <p>Iletisim</p>
+                      <p>
+                        {currentLanguage === "tr"
+                          ? `${t("FooterTr.text6")}`
+                          : `${t("FooterEn.text6")}`}
+                      </p>
                     </a>
                   </li>
                 </ul>
               </div>
               {/* Content */}
               <div className={style.FooterContentWrapperGrid3}>
-                <h3>HAKKIMIZDA</h3>
+                <h3>
+                  {currentLanguage === "tr"
+                    ? `${t("FooterTr.title2")}`
+                    : `${t("FooterEn.title2")}`}
+                </h3>
                 <p>
-                  <span>Aker</span> Tekstil 1988 yılında üretime başlamış ve şu
-                  anda başta İngiltere, Hollanda ve Danimarka olmak üzere birçok
-                  Avrupa ülkesine ihracat yapmaktadır.
+                  {currentLanguage === "tr"
+                    ? `${t("FooterTr.p")}`
+                    : `${t("FooterEn.p")}`}
                 </p>
               </div>
               {/* Content */}

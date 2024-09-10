@@ -32,5 +32,54 @@
   "AboutUsEn": {
     "title": "About Us",
     "text": "We, AKER Tekstil, are a denim factory in Turkey producing denim apparel for high-quality brands worldwide. Our production includes denim jeans, denim skirts, denim jackets, and more. We provide a free sample service for you within 7-10 days. Your orders are welcome, we create samples based on your fabric sample, your samples, your design sketch, or a picture you provide. We can help you expedite samples and mass production at an acceptable price and quality."
+  },
+  "ContentAboutEn": {
+    "title": "MISSION",
+    "title2": "VISION",
+    "title3": "OUR VALUES",
+    "title4": "SOCIAL RESPONSIBILITY",
+    "paragraph": "By continuously improving our product and service quality, we meet the demands of our customers at the highest level and exceed their expectations.",
+    "paragraph2": "To be among the leading companies in the denim industry. To use technology in the best way to produce quality products for the future without harming the nature.",
+    "paragraph3": "Justice",
+    "paragraph3_1": "Dedication",
+    "paragraph3_2": "Flexibility",
+    "paragraph3_3": "Spirit",
+    "paragraph3_4": "Innovation",
+    "paragraph3_5": "Sustainability",
+    "paragraph4": "Respect human health and human rights. To be sensitive to the environment and society. Utilizing qualified and open to development human resources in our company."
+  },
+  "FooterEn": {
+    "Copyright": "Copyright © 2021. All rights reserved.",
+    "title": "MENU",
+    "text1": "Home",
+    "text2": "Get a Quote",
+    "text3": "Corporate",
+    "text4": "Production",
+    "text5": "Collection",
+    "text6": "Blogs",
+    "text7": "Our Stores",
+    "text8": "Sustainability",
+    "text9": "Contact",
+    "title2": "ABOUT US",
+    "p": "Aker Tekstil started production in 1988 and currently exports to many European countries, primarily England, Netherlands, and Denmark."
+  },
+  "AboutPageEn": {
+    "title": "About Us",
+    "p": "We are the manufacturer and exporter of man & woman JEANS products, including pants, cargo pants, Jacket,shorts in İstanbul/Turkey. Keeps production-operations at a 6000 m2 closed production facility. Our weekly production capacity is 12-15 thousand units. The principal activity of the Company is the specialist supply of JEANS clothing direct to customers, the wider European, Asian and African market. We are constantly preparing new collections during the year. Our design teamwork is close observer of the world trends, come out with new colors, materials, figures designs and other details never seen, produced or sold before in order to provide our costumers with the most special collections. Our key competitive advantages are fashion, quality, price and time. Our specialized product range and our 30 year long experience with JEANS keep our error rate insignificantly low and make our calculations accurate. We will not surprise you with sudden changes in price and we will not let you pay for our mistakes. Our Occupational Health and Safety Committee ensures a safe workplace by constantly surveying the workplace and by training every employee how to work in a responsible and safe way. Mope textil is one of Turkey’s top garment manufacturer and the specialist in men’s and woman’s jeans in Asia and europa Region. In addition to our own collection we also respond to the special order in the frame of our capacity. We present you high quality products of reasonable prices. If you want to see our factory, models, also prices you can visit our company."
+  },
+  "HumanResourcesEn": {
+    "title": "Human Resources",
+    "inputName": "Name",
+    "inputSurname": "Surname",
+    "inputEmail": "Email",
+    "inputNumber": "Phone Number",
+    "inputMessage": "Message",
+    "inputSubmit": "Send"
+  },
+  "QualityEn": {
+    "title": "OUR MISSION",
+    "text": "Quality Control, which is indispensable for the textile industry, has reached the top with the Golden Ratio philosophy of Mope Tekstil. Here, the product is carefully examined by the `Quality Assurance Department`, even at the prototype stage. After making the necessary warnings, the mold is removed and production processes are started. By choosing the right material and using the right production techniques, an undesirable situation that may occur on the product is prevented from the very beginning. Problems encountered during sample production shed light on the production phase and thanks to the reports obtained, the basis for a smooth production phase is prepared.",
+    "text2": "A detailed quality control study is carried out at every stage of production. You can see the quality control studies from the sample stage to the packaging stage of the product below. AT SAMPLE PHASE: 1.Security check, 2.Mold control, 3. Checking inside and after sewing, 4. Controls in the washing phase, The controls in the 5th packaging stage are made by examining the finest detail.",
+    "text3": "AT IN PRODUCTION PHASE: 1. In planning; Control of factors such as accessories and fabric, 2. In the model shop; Control of mould, measurement and shrinkage values, 3. In the cutting room; marker and fabric control, 4. Cutting and fabric defect sorting control after cutting, 5. Control and reports (in detail of each product from step setting to all measurements) at and after sewing by the subcontractor and product manager, 6. Checking and reporting of each stage during the washing phase Quality controls are carried out carefully so that any problems that may arise are corrected before they become bigger. In addition to the quality controllers within the departments, washing subcontractors and product managers also carry out the necessary checks and report."
   }
 }

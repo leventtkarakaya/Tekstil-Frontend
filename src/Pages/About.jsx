@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg from "/AboutPageBG.jpg";
 import style from "./Css/AboutPage.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectFade, Autoplay } from "swiper/modules";
+import { useMediaQuery } from "react-responsive";
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/pagination";
 import Resim1 from "/AboutPagePicture1.jpg";
@@ -13,6 +15,10 @@ import Resim5 from "/AboutPagePicture5.jpg";
 import Resim6 from "/AboutPagePicture6.jpg";
 
 export default function About() {
+  const isMobile = useMediaQuery({ query: "(max-width: 780px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1200px)" });
+  const { t } = useTranslation();
+  const currentLanguage = localStorage.getItem("i18nextLng");
   return (
     <>
       <img
@@ -23,20 +29,19 @@ export default function About() {
       />
       <div className={style.AboutContent}>
         <div className={style.AboutContentWrapper}>
-          <h1>AKER TEKSTİL</h1>
+          <h1>
+            {currentLanguage === "tr"
+              ? `${t("AboutPageTr.title")}`
+              : `${t("AboutPageEn.title")}`}
+          </h1>
           <p>
-            Mope Tekstil 1988 yılında üretime başlamış ve şu anda başta
-            İngiltere, Hollanda ve Danimarka olmak üzere birçok Avrupa ülkesine
-            ihracat yapmaktadır. Kısa sürede profesyonel ekibi ile müşterileri
-            tarafından sektörde önemli bir yere getirilmiş; yeniliklere açık,
-            öncü ve birçok firmaya hizmet veren bir firma olarak faaliyetlerini
-            sürdürmektedir. İleri teknoloji kullanımı, Ar-Ge çalışmaları ve
-            başarılı satış ve pazarlama stratejileri ile hem Türkiye'de hem de
-            dünyada büyük markalarla stratejik ortaklığını gerçekleştirdi.
+            {currentLanguage === "tr"
+              ? `${t("AboutPageTr.p")}`
+              : `${t("AboutPageEn.p")}`}
           </p>
         </div>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
           spaceBetween={50}
           loop={true}
           modules={[Pagination, EffectFade, Autoplay]}

@@ -3,6 +3,7 @@ import style from "./Css/QuoteForm.module.css";
 import { useTranslation } from "react-i18next";
 export default function QuoteForm() {
   const currentLanguage = localStorage.getItem("i18nextLng");
+
   const { t } = useTranslation();
   return (
     <>

@@ -12,6 +12,7 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(false);
   const { t, i18n } = useTranslation();
   const currentLanguage = localStorage.getItem("i18nextLng");
+
   const quoteForm = useRef(null);
   const location = useLocation();
 
@@ -22,7 +23,9 @@ export default function Navbar() {
     i18n.changeLanguage(event);
     setActive((prev) => !prev);
   };
-
+  if (currentLanguage === "tr-TR") {
+    localStorage.setItem("i18nextLng", "tr");
+  }
   return (
     <header>
       <div className={style.navbar}>

@@ -23,9 +23,12 @@ export default function Navbar() {
     i18n.changeLanguage(event);
     setActive((prev) => !prev);
   };
-  if (currentLanguage === "tr-TR") {
-    localStorage.setItem("i18nextLng", "tr");
-  }
+  useEffect(() => {
+    if (currentLanguage === "tr-TR") {
+      localStorage.setItem("i18nextLng", "tr");
+    }
+  }, [currentLanguage]);
+
   return (
     <header>
       <div className={style.navbar}>

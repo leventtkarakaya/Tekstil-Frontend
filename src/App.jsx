@@ -15,8 +15,11 @@ import OurStoresPage from "./Pages/OurStoresPage";
 import IsgPage from "./Pages/IsgPage";
 import SupplyPage from "./Pages/SupplyPage";
 import ContactPage from "./Pages/ContactPage";
-
 function App() {
+  const currentLanguage = localStorage.getItem("i18nextLng");
+  if (currentLanguage === "tr-TR") {
+    localStorage.setItem("i18nextLng", "tr");
+  }
   return (
     <>
       <Navbar />

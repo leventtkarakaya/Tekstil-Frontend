@@ -1,12 +1,8 @@
 {
-  "version": 2,
-  "name": "AKER Tekstil",
-  "framework": "vite",
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "cleanUrls": true
+  ]
 }

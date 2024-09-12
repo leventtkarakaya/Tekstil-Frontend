@@ -3,8 +3,8 @@
   "name": "AKER Tekstil",
   "framework": "vite",
   "build": {
-    "command": "npm run build",
-    "devCommand": "npm run dev",
+    "command": "vite build",
+    "devCommand": "vite",
     "outDir": "dist"
   },
   "routes": [

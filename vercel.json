@@ -2,11 +2,6 @@
   "version": 2,
   "name": "AKER Tekstil",
   "framework": "vite",
-  "build": {
-    "command": "vite build",
-    "devCommand": "vite",
-    "outDir": "dist"
-  },
   "routes": [
     {
       "src": "/(.*)",

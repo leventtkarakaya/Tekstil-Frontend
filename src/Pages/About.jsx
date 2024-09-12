@@ -30,12 +30,12 @@ export default function About() {
       <div className={style.AboutContent}>
         <div className={style.AboutContentWrapper}>
           <h1>
-            {currentLanguage === "tr"
+            {currentLanguage === ("tr" || "tr-TR")
               ? `${t("AboutPageTr.title")}`
               : `${t("AboutPageEn.title")}`}
           </h1>
           <p>
-            {currentLanguage === "tr"
+            {currentLanguage === ("tr" || "tr-TR")
               ? `${t("AboutPageTr.p")}`
               : `${t("AboutPageEn.p")}`}
           </p>

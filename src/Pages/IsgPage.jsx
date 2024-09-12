@@ -20,7 +20,7 @@ export default function IsgPage() {
                 color: "#f26b30",
               }}
             >
-              {currentLanguage === "tr"
+              {currentLanguage === ("tr" || "tr-TR")
                 ? `${t("IsgTr.title")}`
                 : `${t("IsgEn.title")}`}
             </h3>
@@ -32,7 +32,7 @@ export default function IsgPage() {
                 fontFamily: "Roboto" + ", sans-serif",
               }}
             >
-              {currentLanguage === "tr"
+              {currentLanguage === ("tr" || "tr-TR")
                 ? `${t("IsgTr.Header1")}`
                 : `${t("IsgEn.Header1")}`}
             </h4>
@@ -46,7 +46,9 @@ export default function IsgPage() {
                 fontWeight: "initial",
               }}
             >
-              {currentLanguage === "tr" ? `${t("IsgTr.p")}` : `${t("IsgEn.p")}`}
+              {currentLanguage === ("tr" || "tr-TR")
+                ? `${t("IsgTr.p")}`
+                : `${t("IsgEn.p")}`}
             </p>
           </div>
         </div>

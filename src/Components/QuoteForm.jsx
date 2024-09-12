@@ -19,7 +19,7 @@ export default function QuoteForm() {
               textTransform: "uppercase",
             }}
           >
-            {currentLanguage === "tr"
+            {currentLanguage === ("tr" || "tr-TR")
               ? `${t("QuoteFormTr.Headtitle")}`
               : `${t("QuoteFormEn.Headtitle")}`}
           </h1>
@@ -46,7 +46,7 @@ export default function QuoteForm() {
                     color: "#f26b30",
                   }}
                 >
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `- ${t("QuoteFormTr.title")} -`
                     : `- ${t("QuoteFormEn.title")} -`}
                 </h4>
@@ -57,7 +57,7 @@ export default function QuoteForm() {
                         color: "#f26b30",
                       }}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("QuoteFormTr.title2")}`
                         : `${t("QuoteFormEn.title2")}`}
                     </p>
@@ -73,19 +73,19 @@ export default function QuoteForm() {
                         }}
                       />
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.title4")}`
                           : `${t("QuoteFormEn.title4")}`}
                       </p>
                       <p>
                         {" "}
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.title5")}`
                           : `${t("QuoteFormEn.title5")}`}
                       </p>
                       <p>
                         {" "}
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.paragraph")}`
                           : `${t("QuoteFormEn.paragraph")}`}
                       </p>
@@ -97,7 +97,7 @@ export default function QuoteForm() {
                         color: "#f26b30",
                       }}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("QuoteFormTr.title3")}`
                         : `${t("QuoteFormEn.title3")}`}
                     </p>
@@ -109,18 +109,18 @@ export default function QuoteForm() {
                       />
                       <p>
                         {" "}
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.title6")}`
                           : `${t("QuoteFormEn.title6")}`}
                       </p>
                       <p>
                         {" "}
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.paragraph2")}`
                           : `${t("QuoteFormEn.paragraph2")}`}
                       </p>
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.paragraph3")}`
                           : `${t("QuoteFormEn.paragraph3")}`}
                       </p>
@@ -139,7 +139,7 @@ export default function QuoteForm() {
                       fontSize: "30px",
                     }}
                   >
-                    {currentLanguage === "tr"
+                    {currentLanguage === ("tr" || "tr-TR")
                       ? `${t("QuoteFormTr.formtitle")}`
                       : `${t("QuoteFormEn.formtitle")}`}
                   </h3>
@@ -154,7 +154,7 @@ export default function QuoteForm() {
                           lineHeight: "30px",
                         }}
                       >
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.formInputName")}`
                           : `${t("QuoteFormEn.formInputName")}`}
                       </label>
@@ -176,7 +176,7 @@ export default function QuoteForm() {
                           lineHeight: "30px",
                         }}
                       >
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("QuoteFormTr.formInputCompanyName")}`
                           : `${t("QuoteFormEn.formInputCompanyName")}`}
                       </label>
@@ -201,7 +201,7 @@ export default function QuoteForm() {
                         lineHeight: "30px",
                       }}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("QuoteFormTr.formInputNumber")}`
                         : `${t("QuoteFormEn.formInputNumber")}`}
                     </label>
@@ -225,7 +225,7 @@ export default function QuoteForm() {
                         lineHeight: "30px",
                       }}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("QuoteFormTr.formInputEmail")}`
                         : `${t("QuoteFormEn.formInputEmail")}`}
                     </label>
@@ -251,7 +251,7 @@ export default function QuoteForm() {
                         lineHeight: "30px",
                       }}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("QuoteFormTr.formInputMessage")}`
                         : `${t("QuoteFormEn.formInputMessage")}`}
                     </label>
@@ -267,7 +267,7 @@ export default function QuoteForm() {
                     style={{ backgroundColor: "#f26b30", color: "white" }}
                     type="submit"
                   >
-                    {currentLanguage === "tr"
+                    {currentLanguage === ("tr" || "tr-TR")
                       ? `${t("QuoteFormTr.formInputSubmit")}`
                       : `${t("QuoteFormEn.formInputSubmit")}`}
                   </button>

@@ -49,7 +49,7 @@ export default function Footer() {
                   />
                 </div>
                 <p style={{ color: "white" }}>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("FooterTr.Copyright")}`
                     : `${t("FooterEn.Copyright")}`}
                 </p>
@@ -57,7 +57,7 @@ export default function Footer() {
               {/* Content */}
               <div className={style.FooterContentWrapperGrid2}>
                 <h3>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("FooterTr.title")}`
                     : `${t("FooterEn.title")}`}
                 </h3>
@@ -65,7 +65,7 @@ export default function Footer() {
                   <li>
                     <a href="/">
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("FooterTr.text1")}`
                           : `${t("FooterEn.text1")}`}
                       </p>
@@ -74,7 +74,7 @@ export default function Footer() {
                   <li>
                     <a id="QuoteForm">
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("FooterTr.text2")}`
                           : `${t("FooterEn.text2")}`}
                       </p>
@@ -83,7 +83,7 @@ export default function Footer() {
                   <li>
                     <a href="/">
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("FooterTr.text3")}`
                           : `${t("FooterEn.text3")}`}
                       </p>
@@ -92,7 +92,7 @@ export default function Footer() {
                   <li>
                     <a href="#">
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("FooterTr.text4")}`
                           : `${t("FooterEn.text4")}`}
                       </p>
@@ -101,7 +101,7 @@ export default function Footer() {
                   <li>
                     <a href="#">
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("FooterTr.text5")}`
                           : `${t("FooterEn.text5")}`}
                       </p>
@@ -110,7 +110,7 @@ export default function Footer() {
                   <li>
                     <a href="#">
                       <p>
-                        {currentLanguage === "tr"
+                        {currentLanguage === ("tr" || "tr-TR")
                           ? `${t("FooterTr.text6")}`
                           : `${t("FooterEn.text6")}`}
                       </p>
@@ -121,12 +121,12 @@ export default function Footer() {
               {/* Content */}
               <div className={style.FooterContentWrapperGrid3}>
                 <h3>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("FooterTr.title2")}`
                     : `${t("FooterEn.title2")}`}
                 </h3>
                 <p>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("FooterTr.p")}`
                     : `${t("FooterEn.p")}`}
                 </p>

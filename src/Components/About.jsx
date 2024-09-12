@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <h1 className={style.AboutTitle}>
-        {currentLanguage === "tr"
+        {currentLanguage === ("tr" || "tr-TR")
           ? `${t("AboutUsTr.title")}`
           : `${t("AboutUsEn.title")}`}
       </h1>
@@ -30,11 +30,15 @@ export default function About() {
           />
           <div className={style.AboutContentText}>
             <p>
-              {currentLanguage === "tr"
+              {currentLanguage === ("tr" || "tr-TR")
                 ? `${t("AboutUsTr.text")}`
                 : `${t("AboutUsEn.text")}`}
             </p>
-            <button>İnçele</button>
+            <button>
+              {currentLanguage === ("tr" || "tr-TR")
+                ? `${t("AboutUsTr.button")}`
+                : `${t("AboutUsEn.button")}`}
+            </button>
           </div>
         </div>
       </div>

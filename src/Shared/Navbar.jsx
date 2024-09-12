@@ -36,7 +36,7 @@ export default function Navbar() {
             <ul>
               <li>
                 <a href="/">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.Anasayfa")}`
                     : `${t("HeaderEn.Anasayfa")}`}
                 </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
                   duration={500}
                   style={{ cursor: "pointer" }}
                 >
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.TeklifAl")}`
                     : `${t("HeaderEn.TeklifAl")}`}
                 </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.Kurumsal")}`
                     : `${t("HeaderEn.Kurumsal")}`}
                 </button>
@@ -87,7 +87,7 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/hakkımızda"
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HeaderTr.Hakkımızda")}`
                         : `${t("HeaderEn.Hakkımızda")}`}
                     </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/musterilerimiz"
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HeaderTr.Müşterilerimiz")}`
                         : `${t("HeaderEn.Müşterilerimiz")}`}
                     </a>
@@ -107,7 +107,7 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/insankaynaklari"
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HeaderTr.InsanKaynakları")}`
                         : `${t("HeaderEn.InsanKaynakları")}`}
                     </a>
@@ -121,7 +121,7 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.Üretim")}`
                     : `${t("HeaderEn.Üretim")}`}
                 </button>
@@ -139,7 +139,7 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/galeri"
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HeaderTr.Galeri")}`
                         : `${t("HeaderEn.Galeri")}`}
                     </a>
@@ -149,7 +149,7 @@ export default function Navbar() {
                       href="/uretimtesisi"
                       className={`dropdown-item ${style.dropdownItemElement}`}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HeaderTr.ÜretimTesisi")}`
                         : `${t("HeaderEn.ÜretimTesisi")}`}
                     </a>
@@ -159,7 +159,7 @@ export default function Navbar() {
                       href="/kalite"
                       className={`dropdown-item ${style.dropdownItemElement}`}
                     >
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HeaderTr.Kalite")}`
                         : `${t("HeaderEn.Kalite")}`}
                     </a>
@@ -168,14 +168,14 @@ export default function Navbar() {
               </div>
               <li>
                 <a href="/koleksiyon">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.Koleksiyon")}`
                     : `${t("HeaderEn.Koleksiyon")}`}
                 </a>
               </li>
               <li>
                 <a href="/magazalarimiz">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.Mağzalarımız")}`
                     : `${t("HeaderEn.Mağzalarımız")}`}
                 </a>
@@ -187,7 +187,7 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.Sürdürebilirlik")}`
                     : `${t("HeaderEn.Sürdürebilirlik")}`}
                 </button>
@@ -213,16 +213,16 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/tedarik"
                     >
-                      {currentLanguage === "tr"
-                        ? `${t("HeaderTr.Tedarik")}`
-                        : `${t("HeaderEn.Tedarik")}`}
+                      {currentLanguage === ("tr" || "tr-TR")
+                        ? `${t("HeaderTr.TedarikYönetimi")}`
+                        : `${t("HeaderEn.TedarikYönetimi")}`}
                     </a>
                   </li>
                 </ul>
               </div>
               <li>
                 <a href="/iletisim">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HeaderTr.İletişim")}`
                     : `${t("HeaderEn.İletişim")}`}
                 </a>

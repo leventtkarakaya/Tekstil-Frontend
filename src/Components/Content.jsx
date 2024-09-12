@@ -29,7 +29,7 @@ export default function Content() {
   };
 
   useEffect(() => {
-    if (currentLanguage === "tr") {
+    if (currentLanguage === ("tr" || "tr-TR")) {
       setPicture([
         {
           id: 1,

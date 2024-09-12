@@ -22,12 +22,12 @@ export default function QualityPage() {
           <div className={style.QualityPageContentText}>
             <div className={style.QualityPageContentTextList1}>
               <h3>
-                {currentLanguage === "tr"
+                {currentLanguage === ("tr" || "tr-TR")
                   ? `${t("QualityTr.title")}`
                   : `${t("QualityEn.title")}`}
               </h3>
               <p>
-                {currentLanguage === "tr"
+                {currentLanguage === ("tr" || "tr-TR")
                   ? `${t("QualityTr.text")}`
                   : `${t("QualityEn.text")}`}
               </p>
@@ -35,13 +35,13 @@ export default function QualityPage() {
             <div className={style.QualityPageContentTextList2}>
               {activeIndex === 0 ? (
                 <p>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("QualityTr.text2")}`
                     : `${t("QualityEn.text2")}`}
                 </p>
               ) : (
                 <p>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("QualityTr.text3")}`
                     : `${t("QualityEn.text3")}`}
                 </p>

@@ -13,27 +13,27 @@ export default function Collection() {
   const [allSection, setAllSection] = useState([
     {
       id: 0,
-      title: currentLanguage === "tr" ? "Hepsi" : "All",
+      title: currentLanguage === ("tr" || "tr-TR") ? "Hepsi" : "All",
       value: <CollectionAll />,
     },
     {
       id: 1,
-      title: currentLanguage === "tr" ? "Jeans" : "Jeans",
+      title: currentLanguage === ("tr" || "tr-TR") ? "Jeans" : "Jeans",
       value: <CollectionJeans />,
     },
     {
       id: 2,
-      title: currentLanguage === "tr" ? "Ceket" : "Jacket",
+      title: currentLanguage === ("tr" || "tr-TR") ? "Ceket" : "Jacket",
       value: <CollectionCeket />,
     },
     {
       id: 3,
-      title: currentLanguage === "tr" ? "T-Shirt" : "T-Shirt",
+      title: currentLanguage === ("tr" || "tr-TR") ? "T-Shirt" : "T-Shirt",
       value: <CollectionTshirt />,
     },
     {
       id: 4,
-      title: currentLanguage === "tr" ? "Şort" : "Shorts",
+      title: currentLanguage === ("tr" || "tr-TR") ? "Şort" : "Shorts",
       value: <CollectionShort />,
     },
   ]);

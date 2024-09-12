@@ -20,14 +20,14 @@ export default function HumanrResources() {
               {/* Content */}
               <div className={style.HumanrResourcesContentForm}>
                 <h1 className={style.HumanrResourcesContentTitle}>
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HumanResourcesTr.title")}`
                     : `${t("HumanResourcesEn.title")}`}
                 </h1>
                 <div className={style.HumanrResourcesContentInputName}>
                   <div>
                     <label htmlFor="name">
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HumanResourcesTr.inputName")}`
                         : `${t("HumanResourcesEn.inputName")}`}
                     </label>
@@ -35,7 +35,7 @@ export default function HumanrResources() {
                   </div>
                   <div>
                     <label htmlFor="Surname">
-                      {currentLanguage === "tr"
+                      {currentLanguage === ("tr" || "tr-TR")
                         ? `${t("HumanResourcesTr.inputSurname")}`
                         : `${t("HumanResourcesEn.inputSurname")}`}
                     </label>
@@ -43,19 +43,19 @@ export default function HumanrResources() {
                   </div>
                 </div>
                 <label htmlFor="email">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HumanResourcesTr.inputEmail")}`
                     : `${t("HumanResourcesEn.inputEmail")}`}
                 </label>
                 <input type="email" id="email" />
                 <label htmlFor="phone">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HumanResourcesTr.inputNumber")}`
                     : `${t("HumanResourcesEn.inputNumber")}`}
                 </label>
                 <input type="text" id="phone" />
                 <label htmlFor="message">
-                  {currentLanguage === "tr"
+                  {currentLanguage === ("tr" || "tr-TR")
                     ? `${t("HumanResourcesTr.inputMessage")}`
                     : `${t("HumanResourcesEn.inputMessage")}`}
                 </label>

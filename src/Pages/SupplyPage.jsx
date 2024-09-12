@@ -18,17 +18,17 @@ export default function SupplyPage() {
           />
           <div className={style.SupplyPageContentText}>
             <h2>
-              {currentLanguage === "tr"
+              {currentLanguage === ("tr" || "tr-TR")
                 ? `${t("SupplyTr.title")}`
                 : `${t("SupplyEn.title")}`}
             </h2>
             <h3>
-              {currentLanguage === "tr"
+              {currentLanguage === ("tr" || "tr-TR")
                 ? `${t("SupplyTr.Header1")}`
                 : `${t("SupplyEn.Header1")}`}
             </h3>
             <p>
-              {currentLanguage === "tr"
+              {currentLanguage === ("tr" || "tr-TR")
                 ? `${t("SupplyTr.p")}`
                 : `${t("SupplyEn.p")}`}
             </p>

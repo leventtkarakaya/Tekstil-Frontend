@@ -8,7 +8,14 @@
     "Bloglar": "Bloglar",
     "Mağzalarımız": "Mağzalarımız",
     "Sürdürebilirlik": "Sürdürebilirlik",
-    "İletişim": "İletişim"
+    "İletişim": "İletişim",
+    "Hakkımızda": "Hakkımızda",
+    "Müşterilerimiz": "Müşterilerimiz",
+    "InsanKaynakları": "İnsan Kaynakları",
+    "Galeri": "Galeri",
+    "ÜretimTesisi": "Üretim Tesisi",
+    "Kalite": "Kalite",
+    "TedarikYönetimi": "Tedarik Yönetimi"
   },
   "QuoteFormTr": {
     "Headtitle": "Hemen Teklif Alın",
@@ -81,5 +88,24 @@
     "text": "Tekstil sektörü için vazgeçilmez olan Kalite Kontrol, Mope Tekstil'in Altın Oran felsefesiyle zirveye ulaşmıştır. Burada ürün, prototip aşamasında bile `Kalite Güvence Departmanı` tarafından titizlikle incelenir. Gerekli uyarılar yapıldıktan sonra kalıp çıkarılır ve üretim süreçleri başlatılır. Doğru malzeme seçimi ve doğru üretim tekniklerinin kullanımı ile ürün üzerinde oluşabilecek istenmeyen bir durum, en başından itibaren önlenir. Numune üretimi sırasında karşılaşılan sorunlar, üretim aşamasına ışık tutar ve elde edilen raporlar sayesinde sorunsuz bir üretim aşamasının temeli hazırlanır.",
     "text2": "Üretimi her aşamasında detaylı bir kalite kontrol çalışması yapılır. Ürünün numune aşamasından paketleme aşamasına kadar yapılan kalite kontrol çalışmalarını aşağıda görebilirsiniz. NUMUNE AŞAMASINDA: 1.Güvenlik kontrolü, 2.Kalıp kontrolü, 3.İç ve dikiş sonrası kontrolü, 4.Yıkama aşamasında kontroller, 5.Paketleme aşamasındaki kontroller, en ince detayına kadar incelenerek yapılır.",
     "text3": "ÜRETİM AŞAMASINDA: 1. Planlama aşamasında; Aksesuarlar ve kumaş gibi faktörlerin kontrolü, 2. Model atölyesinde; Kalıp, ölçü ve büzülme değerlerinin kontrolü, 3. Kesimhanede; Marka ve kumaş kontrolü, 4. Kesim sonrası kumaş kusuru ayıklama kontrolü, 5. Alt yüklenici ve ürün yöneticisi tarafından dikim sırasında ve sonrasında (adım ayarından tüm ölçümlere kadar her ürünün ayrıntılı olarak) kontrol ve raporlama, 6. Yıkama aşamasında her aşamanın kontrolü ve raporlanması. Ortaya çıkabilecek sorunların daha büyük hale gelmeden düzeltilmesi için kalite kontrolleri titizlikle gerçekleştirilir. Departmanlardaki kalite kontrol görevlilerine ek olarak, yıkama alt yüklenicileri ve ürün yöneticileri de gerekli kontrolleri yapar ve raporlar."
+  },
+  "CollectionTr": {
+    "title": "ÜRETİMLERİMİZ",
+    "title2": "KATEGORİLER",
+    "Header1": "Hepsi",
+    "Header2": "Jeans",
+    "Header3": "Ceket",
+    "Header4": "T-Shirt",
+    "Header5": "Şort"
+  },
+  "IsgTr": {
+    "title": "Sürdürebilirlik",
+    "Header1": "İş Sağlığı Güvenliği",
+    "p": "Çalışanlarımızın fiziksel, sosyal ve ruhsal yönden tam iyilik halinde çalışmaları için proaktif ve katılımcı yaklaşımlarla sıfır iş kazası ve meslek hastalığı hedefi ile çalışmaktayız. Bu kapsamda güvenli ve sağlıklı çalışma ortamı sağlayacak iş sağlığı ve güvenliği politikaları ve uygulamaları tüm çalışanların katılımıyla yapılmaktadır. Gerek Çalışma Sosyal Güvenlik Bakanlığı gerekse müşterilerimiz tarafından gerçekleştirilen denetimlerde iş sağlığı ve güvenliği yasal mevzuat gerekliliklerinin karşılandığı ortaya konmuştur."
+  },
+  "SupplyTr": {
+    "title": "Sürdürebilirlik",
+    "Header1": "Tedarik Yönetimi",
+    "p": "Etkin bir fason ve tedarikçi değerlendirme ve denetim mekanizması oluşturulmuştur. Yapılan düzenli saha ziyaretleri ile tedarikçilerimizin de yasal mevzuat ve müşteri standartlarına uyumunu ve süreklilik takibi sağlanmaktayız."
   }
 }

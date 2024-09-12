@@ -2,7 +2,10 @@ import React from "react";
 import BG from "/SupplyBG.jpg";
 import Picture from "/Supply.jpg";
 import style from "./Css/SupplyPage.module.css";
+import { useTranslation } from "react-i18next";
 export default function SupplyPage() {
+  const currentLanguage = localStorage.getItem("i18nextLng");
+  const { t } = useTranslation();
   return (
     <>
       <img src={BG} alt="BG" style={{ width: "100%", height: "100%" }} />
@@ -14,13 +17,20 @@ export default function SupplyPage() {
             className={style.SupplyPageContentPicture}
           />
           <div className={style.SupplyPageContentText}>
-            <h2>Sürdürebilirlik</h2>
-            <h3>Tedarik Yönetimi</h3>
+            <h2>
+              {currentLanguage === "tr"
+                ? `${t("SupplyTr.title")}`
+                : `${t("SupplyEn.title")}`}
+            </h2>
+            <h3>
+              {currentLanguage === "tr"
+                ? `${t("SupplyTr.Header1")}`
+                : `${t("SupplyEn.Header1")}`}
+            </h3>
             <p>
-              Etkin bir fason ve tedarikçi değerlendirme ve denetim mekanizması
-              oluşturulmuştur. Yapılan düzenli saha ziyaretleri ile
-              tedarikçilerimizin de yasal mevzuat ve müşteri standartlarına
-              uyumunu ve süreklilik takibi sağlanmaktayız.
+              {currentLanguage === "tr"
+                ? `${t("SupplyTr.p")}`
+                : `${t("SupplyEn.p")}`}
             </p>
           </div>
         </div>

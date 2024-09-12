@@ -5,60 +5,53 @@ import CollectionJeans from "../Components/CollectionJeans";
 import CollectionCeket from "../Components/CollectionJacket";
 import CollectionTshirt from "../Components/CollectionTshirt";
 import CollectionShort from "../Components/CollectionShort";
+import { useTranslation } from "react-i18next";
 export default function Collection() {
+  const [active, setActive] = useState(0);
+  const currentLanguage = localStorage.getItem("i18nextLng");
+  const { t } = useTranslation();
   const [allSection, setAllSection] = useState([
     {
       id: 0,
-      title: "Hepsi",
+      title: currentLanguage === "tr" ? "Hepsi" : "All",
       value: <CollectionAll />,
     },
     {
       id: 1,
-      title: "Jeans",
+      title: currentLanguage === "tr" ? "Jeans" : "Jeans",
       value: <CollectionJeans />,
     },
     {
       id: 2,
-      title: "Ceket",
+      title: currentLanguage === "tr" ? "Ceket" : "Jacket",
       value: <CollectionCeket />,
     },
     {
       id: 3,
-      title: "T-Shirt",
+      title: currentLanguage === "tr" ? "T-Shirt" : "T-Shirt",
       value: <CollectionTshirt />,
     },
     {
       id: 4,
-      title: "Şort",
+      title: currentLanguage === "tr" ? "Şort" : "Shorts",
       value: <CollectionShort />,
     },
   ]);
-  const [active, setActive] = useState(0);
+  if (currentLanguage === "tr") {
+    allSection[0].title = "Hepsi";
+    allSection[1].title = "Jeans";
+    allSection[2].title = "Ceket";
+    allSection[3].title = "T-Shirt";
+    allSection[4].title = "Şort";
+  } else if (currentLanguage === "en") {
+    allSection[0].title = "All";
+    allSection[1].title = "Jeans";
+    allSection[2].title = "Jacket";
+    allSection[3].title = "T-Shirt";
+    allSection[4].title = "Shorts";
+  }
   const handleContent = (id) => {
-    switch (id) {
-      case 0:
-        setActive(0);
-        setAllSection[0].id = id;
-        break;
-      case 1:
-        setActive(1);
-        setAllSection[1].id = id;
-        break;
-      case 2:
-        setActive(2);
-        setAllSection[2].id = id;
-        break;
-      case 3:
-        setActive(3);
-        setAllSection[3].id = id;
-        break;
-      case 4:
-        setActive(4);
-        setAllSection[4].id = id;
-        break;
-      default:
-        break;
-    }
+    setActive(id);
   };
   return (
     <>

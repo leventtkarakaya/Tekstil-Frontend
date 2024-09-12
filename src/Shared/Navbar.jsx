@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import NavMobile from "../Components/NavMobile";
 import { Link } from "react-scroll";
 import Logo from "/Logo.png";
@@ -11,8 +11,10 @@ export default function Navbar() {
   const [active, setActive] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
   const { t, i18n } = useTranslation();
+  const currentLanguage = localStorage.getItem("i18nextLng");
   const quoteForm = useRef(null);
   const location = useLocation();
+
   const handleActiveMenu = () => {
     setActiveMenu((prev) => !prev);
   };
@@ -20,7 +22,6 @@ export default function Navbar() {
     i18n.changeLanguage(event);
     setActive((prev) => !prev);
   };
-  const currentLanguage = localStorage.getItem("i18nextLng");
 
   return (
     <header>
@@ -37,7 +38,7 @@ export default function Navbar() {
                 <a href="/">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Anasayfa")}`
-                    : `${t("HeaderEn.Home")}`}
+                    : `${t("HeaderEn.Anasayfa")}`}
                 </a>
               </li>
               <li>
@@ -58,7 +59,7 @@ export default function Navbar() {
                 >
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.TeklifAl")}`
-                    : `${t("HeaderEn.Offer")}`}
+                    : `${t("HeaderEn.TeklifAl")}`}
                 </Link>
               </li>
               <div className={style.dropdownLi}>
@@ -70,7 +71,7 @@ export default function Navbar() {
                 >
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Kurumsal")}`
-                    : `${t("HeaderEn.Corporate")}`}
+                    : `${t("HeaderEn.Kurumsal")}`}
                 </button>
                 <ul
                   className="dropdown-menu"
@@ -86,7 +87,9 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/hakkımızda"
                     >
-                      Hakkımızda
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.Hakkımızda")}`
+                        : `${t("HeaderEn.Hakkımızda")}`}
                     </a>
                   </li>
                   <li>
@@ -94,7 +97,9 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/musterilerimiz"
                     >
-                      Müşterilerimiz
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.Müşterilerimiz")}`
+                        : `${t("HeaderEn.Müşterilerimiz")}`}
                     </a>
                   </li>
                   <li>
@@ -102,7 +107,9 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/insankaynaklari"
                     >
-                      İnsan Kaynakları
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.InsanKaynakları")}`
+                        : `${t("HeaderEn.InsanKaynakları")}`}
                     </a>
                   </li>
                 </ul>
@@ -116,7 +123,7 @@ export default function Navbar() {
                 >
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Üretim")}`
-                    : `${t("HeaderEn.Production")}`}
+                    : `${t("HeaderEn.Üretim")}`}
                 </button>
                 <ul
                   className="dropdown-menu"
@@ -132,7 +139,9 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/galeri"
                     >
-                      Galeri
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.Galeri")}`
+                        : `${t("HeaderEn.Galeri")}`}
                     </a>
                   </li>
                   <li>
@@ -140,7 +149,9 @@ export default function Navbar() {
                       href="/uretimtesisi"
                       className={`dropdown-item ${style.dropdownItemElement}`}
                     >
-                      Üretim Tesisi
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.ÜretimTesisi")}`
+                        : `${t("HeaderEn.ÜretimTesisi")}`}
                     </a>
                   </li>
                   <li>
@@ -148,7 +159,9 @@ export default function Navbar() {
                       href="/kalite"
                       className={`dropdown-item ${style.dropdownItemElement}`}
                     >
-                      Kalite
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.Kalite")}`
+                        : `${t("HeaderEn.Kalite")}`}
                     </a>
                   </li>
                 </ul>
@@ -157,14 +170,14 @@ export default function Navbar() {
                 <a href="/koleksiyon">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Koleksiyon")}`
-                    : `${t("HeaderEn.Collection")}`}
+                    : `${t("HeaderEn.Koleksiyon")}`}
                 </a>
               </li>
               <li>
                 <a href="/magazalarimiz">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Mağzalarımız")}`
-                    : `${t("HeaderEn.OurStores")}`}
+                    : `${t("HeaderEn.Mağzalarımız")}`}
                 </a>
               </li>
               <div className={style.dropdownLi}>
@@ -176,7 +189,7 @@ export default function Navbar() {
                 >
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.Sürdürebilirlik")}`
-                    : `${t("HeaderEn.SustainableDevelopment")}`}
+                    : `${t("HeaderEn.Sürdürebilirlik")}`}
                 </button>
                 <ul
                   className={`dropdown-menu ${style.dropdownMenuContent}`}
@@ -200,7 +213,9 @@ export default function Navbar() {
                       className={`dropdown-item ${style.dropdownItemElement}`}
                       href="/tedarik"
                     >
-                      Tedarik Yönetimi
+                      {currentLanguage === "tr"
+                        ? `${t("HeaderTr.Tedarik")}`
+                        : `${t("HeaderEn.Tedarik")}`}
                     </a>
                   </li>
                 </ul>
@@ -209,7 +224,7 @@ export default function Navbar() {
                 <a href="/iletisim">
                   {currentLanguage === "tr"
                     ? `${t("HeaderTr.İletişim")}`
-                    : `${t("HeaderEn.Contact")}`}
+                    : `${t("HeaderEn.İletişim")}`}
                 </a>
               </li>
               <li>
@@ -222,7 +237,7 @@ export default function Navbar() {
                   {active ? (
                     <img
                       src={Tr}
-                      alt=""
+                      alt="Tr"
                       width={25}
                       height={20}
                       defaultValue={"en"}
@@ -231,7 +246,7 @@ export default function Navbar() {
                   ) : (
                     <img
                       src={En}
-                      alt=""
+                      alt="En"
                       width={25}
                       height={20}
                       defaultValue={"tr"}

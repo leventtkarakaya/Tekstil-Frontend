@@ -1,7 +1,10 @@
 import React from "react";
 import Picture from "/IsgPicture.jpg";
 import Style from "./Css/IsgPage.module.css";
+import { useTranslation } from "react-i18next";
 export default function IsgPage() {
+  const { t } = useTranslation();
+  const currentLanguage = localStorage.getItem("i18nextLng");
   return (
     <>
       <img src="/ISG.jpg" alt="ISG" style={{ width: "100%", height: "100%" }} />
@@ -17,7 +20,9 @@ export default function IsgPage() {
                 color: "#f26b30",
               }}
             >
-              Sürdürebilirlik
+              {currentLanguage === "tr"
+                ? `${t("IsgTr.title")}`
+                : `${t("IsgEn.title")}`}
             </h3>
             <h4
               style={{
@@ -27,7 +32,9 @@ export default function IsgPage() {
                 fontFamily: "Roboto" + ", sans-serif",
               }}
             >
-              İş Sağlığı Güvenliği
+              {currentLanguage === "tr"
+                ? `${t("IsgTr.Header1")}`
+                : `${t("IsgEn.Header1")}`}
             </h4>
             <p
               style={{
@@ -39,15 +46,7 @@ export default function IsgPage() {
                 fontWeight: "initial",
               }}
             >
-              Çalışanlarımızın fiziksel, sosyal ve ruhsal yönden tam iyilik
-              halinde çalışmaları için proaktif ve katılımcı yaklaşımlarla sıfır
-              iş kazası ve meslek hastalığı hedefi ile çalışmaktayız. Bu
-              kapsamda güvenli ve sağlıklı çalışma ortamı sağlayacak iş sağlığı
-              ve güvenliği politikaları ve uygulamaları tüm çalışanların
-              katılımıyla yapılmaktadır. Gerek Çalışma Sosyal Güvenlik Bakanlığı
-              gerekse müşterilerimiz tarafından gerçekleştirilen denetimlerde iş
-              sağlığı ve güvenliği yasal mevzuat gerekliliklerinin karşılandığı
-              ortaya konmuştur
+              {currentLanguage === "tr" ? `${t("IsgTr.p")}` : `${t("IsgEn.p")}`}
             </p>
           </div>
         </div>

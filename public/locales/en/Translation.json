@@ -1,14 +1,21 @@
 {
   "HeaderEn": {
-    "Home": "Home",
-    "Offer": "Offer",
-    "Corporate": "Corporate",
-    "Production": "Production",
-    "Collection": "Collection",
-    "Blog": "Blog",
-    "OurStores": "Our Stores",
-    "SustainableDevelopment": "Sustainable Development",
-    "Contact": "Contact"
+    "Anasayfa": "Homepage",
+    "TeklifAl": "Get Offer",
+    "Kurumsal": "Corporate",
+    "Üretim": "Production",
+    "Koleksiyon": "Collection",
+    "Bloglar": "Blogs",
+    "Mağzalarımız": "Our Stores",
+    "Sürdürebilirlik": "Sustainability",
+    "İletişim": "Contact",
+    "Hakkımızda": "About Us",
+    "Müşterilerimiz": "Our Customers",
+    "InsanKaynakları": "Human Resources",
+    "Galeri": "Gallery",
+    "ÜretimTesisi": "Production Facility",
+    "Kalite": "Quality",
+    "TedarikYönetimi": "Supply Management"
   },
   "QuoteFormEn": {
     "Headtitle": "Get a Quote Now",
@@ -81,5 +88,24 @@
     "text": "Quality Control, which is indispensable for the textile industry, has reached the top with the Golden Ratio philosophy of Mope Tekstil. Here, the product is carefully examined by the `Quality Assurance Department`, even at the prototype stage. After making the necessary warnings, the mold is removed and production processes are started. By choosing the right material and using the right production techniques, an undesirable situation that may occur on the product is prevented from the very beginning. Problems encountered during sample production shed light on the production phase and thanks to the reports obtained, the basis for a smooth production phase is prepared.",
     "text2": "A detailed quality control study is carried out at every stage of production. You can see the quality control studies from the sample stage to the packaging stage of the product below. AT SAMPLE PHASE: 1.Security check, 2.Mold control, 3. Checking inside and after sewing, 4. Controls in the washing phase, The controls in the 5th packaging stage are made by examining the finest detail.",
     "text3": "AT IN PRODUCTION PHASE: 1. In planning; Control of factors such as accessories and fabric, 2. In the model shop; Control of mould, measurement and shrinkage values, 3. In the cutting room; marker and fabric control, 4. Cutting and fabric defect sorting control after cutting, 5. Control and reports (in detail of each product from step setting to all measurements) at and after sewing by the subcontractor and product manager, 6. Checking and reporting of each stage during the washing phase Quality controls are carried out carefully so that any problems that may arise are corrected before they become bigger. In addition to the quality controllers within the departments, washing subcontractors and product managers also carry out the necessary checks and report."
+  },
+  "CollectionEn": {
+    "title": "OUR PRODUCTIONS",
+    "title2": "CATEGORIES",
+    "Header1": "All",
+    "Header2": "Jeans",
+    "Header3": "Jacket",
+    "Header4": "T-Shirt",
+    "Header5": "Shorts"
+  },
+  "IsgEn": {
+    "title": "Sustainability",
+    "Header1": "Occupational Health and Safety",
+    "p": "We work with the goal of zero work accidents and occupational diseases with proactive and participatory approaches to ensure that our employees work in full physical, social and spiritual well-being. In this context, occupational health and safety policies and practices that will provide a safe and healthy working environment are carried out with the participation of all employees. Inspections carried out by both the Ministry of Labor and Social Security and our customers have shown that occupational health and safety legal legislation requirements are met."
+  },
+  "SupplyEn": {
+    "title": "Sustainability",
+    "Header1": "Supply Management",
+    "p": "An effective subcontractor and supplier evaluation and audit mechanism has been established. We ensure compliance and continuity monitoring of our suppliers with legal regulations and customer standards through regular field visits."
   }
 }

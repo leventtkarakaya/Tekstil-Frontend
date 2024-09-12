@@ -62,7 +62,16 @@ export default function QuoteForm() {
                         : `${t("QuoteFormEn.title2")}`}
                     </p>
                     <div className={style.QuoteFormContentTextListBox1Check}>
-                      <img src="/Check.png" alt="" width={30} height={30} />
+                      <img
+                        src="/Check.png"
+                        alt="Aker Tekstil"
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                      />
                       <p>
                         {currentLanguage === "tr"
                           ? `${t("QuoteFormTr.title4")}`
@@ -93,7 +102,11 @@ export default function QuoteForm() {
                         : `${t("QuoteFormEn.title3")}`}
                     </p>
                     <div className={style.QuoteFormContentTextListBox2Check}>
-                      <img src="/Check.png" alt="" width={30} height={30} />
+                      <img
+                        src="/Check.png"
+                        alt=""
+                        style={{ width: "30px", height: "30px" }}
+                      />
                       <p>
                         {" "}
                         {currentLanguage === "tr"
